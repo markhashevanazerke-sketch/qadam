@@ -1,0 +1,20 @@
+{
+  "buildings": [
+    "townhouse",
+    "solar_house",
+    "apartment",
+    "shops",
+    "round_tower",
+    "square_tower"
+  ],
+  "instances": 92,
+  "source": "existing polygon_mini_free.glb",
+  "visual_audit": "six types from both sides; in-map repair capture",
+  "map_check": "PASS",
+  "floor_probes": 1476,
+  "simulation_seconds": 150,
+  "vehicle_overlap_m": 0,
+  "junction_passages": 49,
+  "max_stop_s": 39.2,
+  "backup": "backups/before-building-cleanup"
+}

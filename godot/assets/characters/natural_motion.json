@@ -1,0 +1,68 @@
+[
+  {
+    "character": "man",
+    "source": "Male1_B3_Walk.bvh",
+    "cycle_frames": [
+      48,
+      82
+    ],
+    "seconds": 1.1333322000000001,
+    "stride_m": 1.3713783132559867,
+    "speed_m_s": 1.2100408982079451,
+    "clothing": [
+      {
+        "material": "Std_Skin_Body",
+        "removed_triangles": 3693
+      },
+      {
+        "material": "Std_Skin_Arm",
+        "removed_triangles": 2178
+      },
+      {
+        "material": "Std_Skin_Leg",
+        "removed_triangles": 4528
+      },
+      {
+        "material": "Std_Nails",
+        "removed_triangles": 668
+      }
+    ]
+  },
+  {
+    "character": "girl",
+    "source": "Female1_B03_Walk1.bvh",
+    "cycle_frames": [
+      93,
+      131
+    ],
+    "seconds": 1.2666654000000002,
+    "stride_m": 1.4520369195168277,
+    "speed_m_s": 1.146346082806736,
+    "clothing": [
+      {
+        "material": "Std_Skin_Body",
+        "removed_triangles": 1392
+      },
+      {
+        "material": "lambert13",
+        "removed_triangles": 1436
+      },
+      {
+        "material": "Std_Skin_Arm",
+        "removed_triangles": 724
+      },
+      {
+        "material": "Std_Skin_Leg",
+        "removed_triangles": 3028
+      },
+      {
+        "material": "Std_Nails",
+        "removed_triangles": 668
+      },
+      {
+        "material": "Default_OBJ.003",
+        "removed_triangles": 428
+      }
+    ]
+  }
+]

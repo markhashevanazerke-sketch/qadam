@@ -1,0 +1,19 @@
+{
+  "bug": "At 60 physics Hz, first acceleration movement was below 0.003m and reset speed to zero forever",
+  "reproduced_before_fix": true,
+  "regression": "TRAFFIC_REGRESSION_PASS",
+  "map_simulation": {
+    "physics_hz": 60,
+    "seconds": 600,
+    "minimum_car_travel_m": 782.03465,
+    "junction_passages": 236,
+    "max_stop_s": 41.5833,
+    "cycles": 13,
+    "result": "MAP_CHECK_PASS"
+  },
+  "recovery_after_player_leaves": {
+    "blocked_exit_min_travel_m": 871.14884,
+    "intersection_min_travel_m": 852.19315,
+    "crosswalk_min_travel_m": 870.40657
+  }
+}

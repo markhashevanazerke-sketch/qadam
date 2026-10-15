@@ -1,0 +1,200 @@
+{
+  "comment": "Island life v5 (12.10.2026). No pedestrians and no shops on the south blue parking slab — it stays a car/parking zone. Plazas: Playground (child on real equipment), Deck plaza, South-east plaza (2 kiosks), West high terrace, West park strip. Every kiosk has a vendor inside behind the goods counter (always present, sways, livelier while a customer browses). Shoppers ENTER the kiosk through the doorway, spend time at the goods shelf and leave. Each walker has an independent destination, a fixed lateral lane and yield logic — no following. Models: 0 teen boy, 1 asian boy (child), 2 cartoon girl, 3 game man. Rectangles: [x0, z0, x1, z1].",
+  "models": [
+    "res://assets/characters/teen-boy_walk.glb",
+    "res://assets/characters/cartoon_asian__boy_walk.glb",
+    "res://assets/characters/free_stylized_cartoon_girl_rigged_character_walk.glb",
+    "res://assets/characters/free_cartoon_game_man_character_rigged_walk.glb"
+  ],
+  "walk_speed_min": 0.7,
+  "walk_speed_max": 1.1,
+  "routes": [
+    {
+      "name": "Playground",
+      "rect": [
+        -40.5,
+        40.5,
+        -21.0,
+        51.0
+      ],
+      "step": 0.5,
+      "walkers": 1,
+      "role": "child",
+      "model": 1,
+      "scale": 0.85,
+      "speed_min": 0.9,
+      "speed_max": 1.3,
+      "play_spots": [
+        [
+          -46.5,
+          46.5,
+          1.6500000000000001
+        ],
+        [
+          -24.0,
+          45.0,
+          1.7999999999999998
+        ],
+        [
+          -35.25,
+          44.55,
+          0.8999999999999999
+        ],
+        [
+          -31.049999999999997,
+          49.050000000000004,
+          0.75
+        ]
+      ]
+    },
+    {
+      "name": "Deck plaza",
+      "rect": [
+        -51.0,
+        2.25,
+        -45.0,
+        9.0
+      ],
+      "step": 0.5,
+      "walkers": 3,
+      "roles": [
+        "shopper",
+        "stroller",
+        "shopper"
+      ],
+      "models": [
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "name": "South-east plaza",
+      "rect": [
+        23.25,
+        121.5,
+        35.25,
+        129.75
+      ],
+      "step": 0.5,
+      "walkers": 3,
+      "roles": [
+        "shopper",
+        "stroller",
+        "shopper"
+      ],
+      "models": [
+        0,
+        3,
+        0
+      ],
+      "browse_chance": 0.1,
+      "loiter_min": 2.0,
+      "loiter_max": 4.0,
+      "loiter_cd_min": 8.0,
+      "loiter_cd_max": 18.0
+    },
+    {
+      "name": "West high terrace",
+      "rect": [
+        -69.75,
+        112.5,
+        -63.0,
+        117.75
+      ],
+      "step": 0.5,
+      "walkers": 3,
+      "roles": [
+        "shopper",
+        "shopper",
+        "stroller"
+      ],
+      "models": [
+        3,
+        2,
+        2
+      ],
+      "speed_min": 0.6,
+      "speed_max": 0.9,
+      "browse_chance": 0.0,
+      "loiter_min": 2.0,
+      "loiter_max": 4.0,
+      "loiter_cd_min": 8.0,
+      "loiter_cd_max": 20.0
+    },
+    {
+      "name": "West park strip",
+      "rect": [
+        -57.0,
+        69.0,
+        -49.5,
+        70.5
+      ],
+      "step": 0.5,
+      "walkers": 1,
+      "roles": [
+        "stroller"
+      ],
+      "models": [
+        3
+      ],
+      "speed_min": 0.65,
+      "speed_max": 0.85,
+      "browse_chance": 0.0,
+      "loiter_min": 1.5,
+      "loiter_max": 3.5,
+      "loiter_cd_min": 8.0,
+      "loiter_cd_max": 20.0
+    }
+  ],
+  "shops": [
+    {
+      "pos": [
+        -48.8,
+        19.983999999999998,
+        5.625
+      ],
+      "face": [
+        0.0,
+        -1.0
+      ],
+      "route": 1,
+      "awning": "#e2574c",
+      "sign": "#ffd23e",
+      "light": "#ffdf9e",
+      "vendor_model": 0
+    },
+    {
+      "pos": [
+        33.1,
+        26.067999999999998,
+        125.25
+      ],
+      "face": [
+        0.0,
+        -1.0
+      ],
+      "route": 2,
+      "awning": "#8a4cc8",
+      "sign": "#ff9ecb",
+      "light": "#ffd9f0",
+      "vendor_model": 3
+    },
+    {
+      "pos": [
+        25.5,
+        26.067999999999998,
+        126.44999999999999
+      ],
+      "face": [
+        0.0,
+        -1.0
+      ],
+      "route": 2,
+      "awning": "#e0a63a",
+      "sign": "#ffe9a8",
+      "light": "#ffe9b8",
+      "vendor_model": 2
+    }
+  ]
+}

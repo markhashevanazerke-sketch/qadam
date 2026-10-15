@@ -1,0 +1,44 @@
+{
+  "file": "source_assets/cartoon/models/shop_cartoon.glb",
+  "sha256": "9698b3480d3bd86b5f8f11a623fb86a826eb238d93bd05ed0a238c6e6692303d",
+  "bytes": 373500,
+  "name": "Shop Cartoon",
+  "author_as_embedded": "Saar Designer (https://sketchfab.com/saardesigner)",
+  "source": "https://sketchfab.com/3d-models/shop-cartoon-50cbb278a3b0481396857c7826543498",
+  "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+  "received_date": "2026-10-13",
+  "status": "integrated_into_compact_cartoon_city",
+  "modifications": "None; original GLB moved unchanged from Downloads.",
+  "inspection": {
+    "valid_glb_version": 2,
+    "meshes": 52,
+    "materials": 16,
+    "images": 0,
+    "skins": 0,
+    "animations": [],
+    "external_uris": []
+  },
+  "runtime_source": "assets/cartoon/source/shop_cartoon.glb",
+  "preparation": "Reused existing astana3d prepared mesh: authored geometry/materials, normalized height 5.3m, presentation road and original text removed, LODs generated. Added separate frontage labels; no new shop geometry.",
+  "local_source": "godot/assets/shops/shop_cartoon.glb",
+  "local_prepared": "godot/assets/shops/shop.res",
+  "instances": 3,
+  "source_unchanged": true,
+  "positions": [
+    [
+      -11.7,
+      0.035,
+      -44.5
+    ],
+    [
+      -41.5,
+      0.035,
+      0
+    ],
+    [
+      11.7,
+      0.035,
+      44.5
+    ]
+  ]
+}

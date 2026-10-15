@@ -1,0 +1,80 @@
+[
+  {
+    "file": "source_assets/cartoon/models/groceries_pack_low_poly_assets_for_your_games.glb",
+    "sha256": "16cbe8a213c934be301bf1854e32a4f17f7f23b0400ba70280f7ce400a930fa6",
+    "bytes": 33387504,
+    "name": "Groceries Pack! Low poly assets for your games!",
+    "author_as_embedded": "tulex_art (https://sketchfab.com/CassioFernandes)",
+    "source": "https://sketchfab.com/3d-models/groceries-pack-low-poly-assets-for-your-games-46d7eb7049ac4becae4258518f86818d",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "received_date": "2026-10-13",
+    "receipt_batch": 2,
+    "role": "Продукты",
+    "status": "integrated_into_compact_cartoon_city",
+    "modifications": "None; original GLB moved unchanged from Downloads.",
+    "inspection": {
+      "valid_glb_version": 2,
+      "meshes": 29,
+      "materials": 29,
+      "images": 87,
+      "skins": 0,
+      "animations": [],
+      "external_uris": []
+    },
+    "runtime_source": "assets/cartoon/source/groceries_pack_low_poly_assets_for_your_games.glb",
+    "preparation": "Geometry merged by material; uniform scale, presentation pieces omitted as recorded in CREDITS.md; runtime LODs.",
+    "integration": "Copied prepared meshes and grocery textures from astana3d; arranged as separate shop interiors."
+  },
+  {
+    "file": "source_assets/cartoon/models/low-poly_counter_with_side_gate.glb",
+    "sha256": "158dd1240abf586130846f421014c33021ac517d1a487ac2a9a72f5173282ce3",
+    "bytes": 98840,
+    "name": "Low-Poly Counter with Side Gate",
+    "author_as_embedded": "TepidGames (https://sketchfab.com/TepidGames)",
+    "source": "https://sketchfab.com/3d-models/low-poly-counter-with-side-gate-5f3888c293174dea86be0667ec295729",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "received_date": "2026-10-13",
+    "receipt_batch": 2,
+    "role": "Прилавок",
+    "status": "integrated_into_compact_cartoon_city",
+    "modifications": "None; original GLB moved unchanged from Downloads.",
+    "inspection": {
+      "valid_glb_version": 2,
+      "meshes": 4,
+      "materials": 2,
+      "images": 0,
+      "skins": 0,
+      "animations": [],
+      "external_uris": []
+    },
+    "runtime_source": "assets/cartoon/source/low-poly_counter_with_side_gate.glb",
+    "preparation": "Geometry merged by material; uniform scale, presentation pieces omitted as recorded in CREDITS.md; runtime LODs.",
+    "integration": "Copied prepared meshes and grocery textures from astana3d; arranged as separate shop interiors."
+  },
+  {
+    "file": "source_assets/cartoon/models/shelf_low_poly.glb",
+    "sha256": "bb5c0e668f6332e0375fbe9a3176c8be0f95b1e6b9cfe0d6df82c53ed2be8e8a",
+    "bytes": 7840,
+    "name": "Shelf low poly",
+    "author_as_embedded": "3dMayaAnas (https://sketchfab.com/aj09074)",
+    "source": "https://sketchfab.com/3d-models/shelf-low-poly-c219be26efee4777a71cee33b81ab4e8",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "received_date": "2026-10-13",
+    "receipt_batch": 2,
+    "role": "Стеллаж",
+    "status": "integrated_into_compact_cartoon_city",
+    "modifications": "None; original GLB moved unchanged from Downloads.",
+    "inspection": {
+      "valid_glb_version": 2,
+      "meshes": 1,
+      "materials": 1,
+      "images": 0,
+      "skins": 0,
+      "animations": [],
+      "external_uris": []
+    },
+    "runtime_source": "assets/cartoon/source/shelf_low_poly.glb",
+    "preparation": "Geometry merged by material; uniform scale, presentation pieces omitted as recorded in CREDITS.md; runtime LODs.",
+    "integration": "Copied prepared meshes and grocery textures from astana3d; arranged as separate shop interiors."
+  }
+]

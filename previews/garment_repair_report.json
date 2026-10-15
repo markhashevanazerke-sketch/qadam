@@ -1,0 +1,20 @@
+[
+  {
+    "material": "Std_Skin_Body",
+    "source_triangles": 2456,
+    "covered_triangles_removed": 1529,
+    "visible_triangles": 927
+  },
+  {
+    "material": "lambert13",
+    "source_triangles": 1436,
+    "covered_triangles_removed": 1436,
+    "visible_triangles": 0
+  },
+  {
+    "material": "Std_Skin_Arm",
+    "source_triangles": 8368,
+    "covered_triangles_removed": 819,
+    "visible_triangles": 7549
+  }
+]

@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cww1i22hcpv1l"
+path.s3tc="res://.godot/imported/boy_20.jpg-932c3d2506a3b125caa0ed48bfb05f24.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "c00adbd25ebb16f56d424df00ea4851a"
+}
+
+[deps]
+
+source_file="res://assets/characters/boy_20.jpg"
+dest_files=["res://.godot/imported/boy_20.jpg-932c3d2506a3b125caa0ed48bfb05f24.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

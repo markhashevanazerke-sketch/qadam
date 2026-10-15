@@ -1,0 +1,21 @@
+{
+  "simulation_seconds": 600,
+  "junction_passages": 235,
+  "pedestrian_crossings": 170,
+  "trips": 224,
+  "signal_cycles": 13,
+  "longest_stop_seconds": 42.5,
+  "longest_phase_seconds": 18,
+  "minimum_vehicle_distance_m": 773.8472,
+  "minimum_pedestrian_distance_m": 281.645,
+  "max_approximate_obb_overlap_m": 0.035469,
+  "floor_probes": 1476,
+  "result": "MAP_CHECK_PASS",
+  "motion_source": "ACCAD / The Ohio State University, CC BY 3.0",
+  "visual_checks": [
+    "natural_walk_front.png",
+    "natural_walk_side.png",
+    "clothing_compare_front.png"
+  ],
+  "signal_model_status": "Kenney preview only; awaiting exception to source-model restriction"
+}

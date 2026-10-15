@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -euo pipefail
+project_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)/godot"
+if [[ -n "${GODOT_BIN:-}" ]]; then
+    engine="$GODOT_BIN"
+elif command -v godot >/dev/null 2>&1; then
+    engine="$(command -v godot)"
+elif command -v godot4 >/dev/null 2>&1; then
+    engine="$(command -v godot4)"
+elif [[ -x "$HOME/.local/bin/godot" ]]; then
+    engine="$HOME/.local/bin/godot"
+else
+    echo 'Install Godot 4.4.1+ or set GODOT_BIN to its executable.' >&2
+    exit 1
+fi
+# Prefer the available discrete GPU for graphical runs on hybrid Linux laptops.
+# The integrated GPU remains available explicitly; headless checks need neither.
+headless_run=false
+for argument in "$@"; do
+    [[ "$argument" == "--headless" ]] && headless_run=true
+done
+if [[ "$headless_run" == false ]]; then
+    if [[ "${NAZERKE_GPU:-auto}" == "integrated" ]]; then
+        unset __NV_PRIME_RENDER_OFFLOAD __GLX_VENDOR_LIBRARY_NAME __VK_LAYER_NV_optimus
+        export DRI_PRIME=0
+    elif [[ "${NAZERKE_GPU:-auto}" != "system" ]] && command -v nvidia-smi >/dev/null 2>&1 && nvidia-smi -L >/dev/null 2>&1; then
+        export __NV_PRIME_RENDER_OFFLOAD=1
+        export __GLX_VENDOR_LIBRARY_NAME=nvidia
+        export __VK_LAYER_NV_optimus=NVIDIA_only
+    fi
+fi
+# A fresh clone has no Godot import cache. Prepare it before running a scene.
+if [[ ! -d "$project_dir/.godot/imported" ]]; then
+    "$engine" --headless --editor --path "$project_dir" --import
+fi
+exec "$engine" --path "$project_dir" "$@"

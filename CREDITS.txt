@@ -1,0 +1,213 @@
+ACTIVE VIEWER MAP
+Modern City Block by akselmot
+https://sketchfab.com/3d-models/modern-city-block-c80dba249d9547cbb48d00828d23cfa7
+License listed by Sketchfab: Free Standard
+https://sketchfab.com/licenses
+User supplied GLB on 2026-10-08; original retained in source/modern_city_block.glb.
+Working copy: centimetres converted to metres, centered; material swatch planes removed.
+Textures and authored materials preserved. Not an actual reconstruction of Almaty.
+
+MAIN MINI-TOWN (updated 2026-10-10)
+POLYGON Mini [FREE] by Leafia dev. — free version of the Synty "POLYGON Mini" asset.
+https://sketchfab.com/3d-models/polygon-mini-free-87ad9a911fcb4c6d9f786319c66db26c
+License: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+Attribution: "POLYGON Mini [FREE]" by Leafia dev. (Leaf_dev) on Sketchfab.
+Original GLB unmodified: godot/assets/polygon_mini_free.glb.
+Main map of godot/main.tscn (node "MiniCity", scale x3, centered on the origin).
+The previous city map (modern_city_enclosed) is not in the scene anymore; its files
+and NPC routes are kept in the repository, and pedestrians activate automatically
+when the CityBlock node is restored to the scene.
+
+PREVIOUS OSM BLOCKOUT (retained separately)
+
+MAP DATA
+© OpenStreetMap contributors
+https://www.openstreetmap.org/copyright
+Database license: Open Database License (ODbL) 1.0
+https://opendatacommons.org/licenses/odbl/1-0/
+Downloaded 2026-10-08 via the public OSM map API:
+https://www.openstreetmap.org/api/0.6/map?bbox=76.922,43.242,76.933,43.250
+Unmodified source data retained in source/almaty.osm.
+The Blender scenes, GLB and rendered previews derive from these data.
+Keep OpenStreetMap attribution with shared previews and in future game credits.
+Observe ODbL requirements when distributing source or adapted map databases.
+
+IMPORT TOOL
+Blosm 2.7.28, base functionality.
+Vladimir Elistratov and contributors.
+https://github.com/vvoovv/blosm
+https://github.com/vvoovv/blosm/archive/refs/heads/release.zip
+Downloaded 2026-10-08; original archive and full license retained locally.
+GPL-3.0-or-later: source/blosm-release/LICENSE
+No paid assets, Google Maps imagery or paid Blosm Pro features used.
+
+PROCESSING
+Imported in Blender 5.2.2 LTS with Blosm 3Dsimple.
+Added flat display base, simple colors, lights and cameras.
+Converted road curves to meshes for portable GLB export.
+Missing building heights generated approximately by the importer.
+No claim of architectural or survey-grade accuracy.
+
+ENCLOSED VARIANT
+21 additional copies of the source apartment buildings, new ground, access road ring and perimeter fence.
+Working file: blender/modern_city_enclosed.blend. Godot creates static exterior collision shapes.
+The original asset license still applies to duplicated buildings.
+
+SELECTED CHARACTERS (2026-10-08)
+Sources downloaded by the user. Original GLBs preserved; working Blender imports with packed textures.
+License listed for each asset: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+
+teen-boy — theskipper
+https://sketchfab.com/3d-models/teen-boy-fff65cd5b0934eff8e3a281766a52bf5
+
+cartoon Asian  Boy — giyas3dartist
+https://sketchfab.com/3d-models/cartoon-asian-boy-db62a970abc549f58f8be3f53ac96f94
+
+Free Stylized Cartoon Girl Rigged Character — Canino3d
+https://sketchfab.com/3d-models/free-stylized-cartoon-girl-rigged-character-dcaa822909ae4e04ad7eb85bc371a8c4
+
+Free Cartoon Game Man Character (Rigged) — Canino3d
+https://sketchfab.com/3d-models/free-cartoon-game-man-character-rigged-a69c8962f4a14ea89bf623d716a81411
+
+Everyday Jane, Casual modern woman, rigged — XRProfXR
+https://sketchfab.com/3d-models/everyday-jane-casual-modern-woman-rigged-4c32c738e0074637beac26bbe670aca3
+
+RETARGETED WALK ANIMATION
+Walk derived from Everyday Jane by XRProfXR (CC BY 4.0), source linked above.
+Retargeted and baked onto four other selected characters; scale and ground contact adjusted.
+Original character attribution and CC BY 4.0 terms apply to each derivative asset.
+
+
+COMPACT QUARTER — LOCAL DERIVATIVES
+All nazerke_kit assets are extracted from the original POLYGON Mini [FREE] by Leafia dev. already present in this project; original attribution and CC BY 4.0 apply. Buildings and props were separated by source-space bounds / connected components, recentered, and rescaled. Source textures are unchanged. Road and paving surfaces were extracted and flattened; some ground instances use plain material overrides. No newly generated vehicle or building geometry. Extraction records: godot/assets/nazerke_kit/manifest.json.
+
+BAITEREK (borrowed from astana3d at the user’s request)
+Joker Boss — Baiterek Astana
+https://sketchfab.com/3d-models/1437567dff9d4d4dbf01ea78f03e3f00
+CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Original GLB copied unchanged from /home/yernur/astana3d/assets/models/baiterek.glb; uniformly scaled to 48 game metres and placed outside the playable district.
+
+DENSE EVENING DISTRICT — CARTOON CITIZENS
+Three prepared cartoon characters copied from astana3d/assets/characters, including their existing walk/idle animations and textures. Geometry is unchanged; clothing receives runtime palette variants.
+Free Stylized Cartoon Game Boy Character Rigged — Canino3d, CC BY 4.0
+https://sketchfab.com/3d-models/free-stylized-cartoon-game-boy-character-rigged-92b4b22d14194be191c0df00f6e62b3d
+Girl and man — Canino3d, CC BY 4.0; original asset links listed above.
+Walk animation donor: Nathan Animated 003 — Walking 3D Man, Renderpeople, CC BY 4.0
+https://sketchfab.com/3d-models/nathan-animated-003-walking-3d-man-143a2b1ea5eb4385ae90a73657aca3bc
+Idle derived from that walk. Realistic donor geometry is NOT used in this scene.
+Previous signal stands used connected component 631 of the original Nazerke POLYGON Mini model with flat SVG indicators; these are no longer instantiated by active traffic. Sky and clouds are a shader.
+
+NATURAL ADULT WALK — 2026-10-14
+Motion: Open Motion Project, ACCAD / The Ohio State University.
+https://accad.ohio-state.edu/research/motion-lab/mocap-system-and-data
+License: Creative Commons Attribution 3.0
+https://creativecommons.org/licenses/by/3.0/
+Sources: Male1_B3_Walk.bvh and Female1_B03_Walk1.bvh.
+Original archives: source/motion/Male1_bvh.zip, Female1_bvh.zip.
+Changes: extracted stable loops, retargeted recorded motion to Canino3d cartoon
+rigs, normalized heading, removed forward root travel, preserved bob and foot
+contact, loop seam correction; playback follows actual stride speed.
+Derivatives: godot/assets/characters/man_natural.glb, girl_natural.glb.
+Character geometry remains Canino3d CC BY 4.0 (links above). Covered skin
+triangles and hidden underwear layers are masked; cloth clearance adjusted.
+Existing credited Nathan-derived idle and boy walk remain unchanged.
+
+BUILDING CLEANUP — 2026-10-14
+Six local POLYGON Mini building derivatives re-extracted using whole authored
+connected components. Unrelated fence/mailbox/island fragments excluded;
+complete facade/roof details restored. Townhouse/solar_house foundation vertices
+lowered to street ground; degenerate faces omitted. Source materials retained.
+Original Leafia dev. / Synty attribution and CC BY 4.0 remain applicable.
+
+VOLUMETRIC TRAFFIC SIGNALS — 2026-10-14
+City Kit Roads 2.2 by Kenney
+https://kenney.nl/assets/city-kit-roads
+CC0 — https://creativecommons.org/publicdomain/zero/1.0/
+Original license: godot/assets/signals/kenney/License.txt
+Original traffic-light.glb and traffic-light-object-vertical.glb and texture
+colormap.png preserved. Two-lens derivative removes the center lamp and
+shortens the original head. Original housing, visors, end lenses and brackets
+are retained. Materials adapted for switchable lamps and pedestrian/turn
+symbols. Runtime scale and orientation adapted to the district.
+
+CARTOON SHOPS — 2026-10-14
+Shop Cartoon by Saar Designer (https://sketchfab.com/saardesigner)
+https://sketchfab.com/3d-models/shop-cartoon-50cbb278a3b0481396857c7826543498
+CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Original shop_cartoon.glb copied unchanged from astana3d/source_assets/cartoon/models.
+Runtime shop.res copied from astana3d/assets/cartoon/prepared: original meshes
+merged by material, height normalized to 5.3m, presentation road/markings and
+original text omitted, LODs generated. Three instances rotated/placed in separate parts of this
+district; separate shop-name labels added. Source materials retained.
+Provenance and source SHA256: godot/assets/shops/provenance.json.
+
+SHOP INTERIORS — 2026-10-14
+Prepared meshes copied from /home/yernur/astana3d/assets/cartoon/prepared;
+grocery textures copied from assets/cartoon/source. Original artist geometry retained.
+- Shelf low poly — 3dMayaAnas (https://sketchfab.com/aj09074)
+  https://sketchfab.com/3d-models/shelf-low-poly-c219be26efee4777a71cee33b81ab4e8
+- Low-Poly Counter with Side Gate — TepidGames (https://sketchfab.com/TepidGames)
+  https://sketchfab.com/3d-models/low-poly-counter-with-side-gate-5f3888c293174dea86be0667ec295729
+- Groceries Pack! Low poly assets for your games! — tulex_art (https://sketchfab.com/CassioFernandes)
+  https://sketchfab.com/3d-models/groceries-pack-low-poly-assets-for-your-games-46d7eb7049ac4becae4258518f86818d
+All three: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+Prior preparation: merged geometry by material, normalized scale, generated LODs.
+Here: shelf runtime scaling, aligned layout, product fitting to measured board bounds,
+counter orientation corrected. No change to original projects. Architectural room shell
+and door detailing are new scene geometry, separate from the credited artist props.
+
+HOME INTERIORS — 2026-10-14
+Five new room layouts, architectural shells, original procedural low-poly beds,
+sofas, tables, chairs, kitchen units, appliances, bathroom fixtures, woven rugs,
+books, plants and stylized window scenery: created for this working copy.
+Artist meshes reused from the existing astana3d copies (not newly downloaded):
+Shelf low poly — 3dMayaAnas, and Groceries Pack — tulex_art / Cassio Fernandes.
+Both CC BY 4.0; exact source URLs and licenses appear in SHOP INTERIORS above.
+Home use: uniform fitting and placement, books on existing shelf boards;
+no source-mesh changes. Original astana3d and 3dastana-nazerke projects untouched.
+
+AUDIO — 2026-10-14 (all assets below: CC0 1.0)
+License: https://creativecommons.org/publicdomain/zero/1.0/
+- relax_background1 — joaquinton
+  https://opengameart.org/content/relaxbackground1
+  File: https://opengameart.org/sites/default/files/relax_background1_0.ogg
+  Use: quiet looping shop music. Loudness normalized to -23 LUFS.
+- High traffic road sounds — IgnasD
+  https://opengameart.org/content/high-traffic-road-sounds
+  File: https://opengameart.org/sites/default/files/gatve%20Varniu_2.ogg
+  Use: street ambience; also low-pass filtered, very quiet outside sound indoors.
+  Changes: DC removal, low-pass EQ, seam crossfade and level adjustment.
+- racing car engine sound loops — domasx2
+  https://opengameart.org/content/racing-car-engine-sound-loops
+  File: https://opengameart.org/sites/default/files/loop_0.wav
+  Source author's revised public-domain recording version (2011-07-24).
+  Use: spatial car/bus engine loops, runtime pitch driven by vehicle speed.
+  Changes: DC removal, EQ, loop crossfade and level adjustment.
+- Impact Sounds — Kenney / Kenney Vleugels
+  https://kenney.nl/assets/impact-sounds
+  Use: four concrete footsteps, four wood footsteps, impactBell_heavy_000.
+  Changes: level matching, tiny boundary fades, EQ for the shop entry bell.
+- RPG Audio — Kenney / Kenney Vleugels
+  https://kenney.nl/assets/rpg-audio
+  Use: doorOpen_1 and doorClose_1. Level matching and boundary fades.
+Original downloaded files and Kenney license texts: source/audio/.
+Reproducible preparation: tools/prepare_audio.py (ffmpeg, NumPy, SciPy).
+Only derived runtime OGG files in godot/audio/ are needed to play offline.
+
+FOOTSTEP REPLACEMENT — 2026-10-15
+Fantozzi's Footsteps (Grass/Sand & Stone) — Fantozzi, submitted by qubodup
+https://opengameart.org/content/fantozzis-footsteps-grasssand-stone
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
+Source: https://opengameart.org/sites/default/files/Fantozzi-footsteps.7z
+Use: StoneL1-L3 and StoneR1-R3; six alternating shoe recordings.
+Changes: silence trimming, DC removal, 65–3800 Hz bandpass outdoors,
+65–2100 Hz softer indoor variant, gentle edge fades and matched levels.
+These replace the previous Kenney concrete and wood footstep sounds.
+Kenney bell and door recordings remain in use.
+Preparation: tools/prepare_footsteps.py; originals in source/audio/footsteps/.
+
+UI fonts: Noto Sans Regular / SemiBold and Noto Serif Display SemiBold.
+Copyright 2022 The Noto Project Authors. SIL Open Font License 1.1.
+Unmodified local font files; license: godot/assets/fonts/LICENSE.txt.
+
+2026-10-15 garment correction: authored girl model retained; skin coverage now follows the shirt surface instead of a broad height-only cut. No replacement body, clothing, or animations generated. Tool: tools/repair_garments.py.

@@ -1,0 +1,61 @@
+{
+  "district": "Nazerke / Кешкі аудан",
+  "buildings": 92,
+  "moving_vehicles": 26,
+  "parked_vehicles": 2,
+  "cartoon_citizens": 32,
+  "cartoon_models": [
+    "man",
+    "girl",
+    "boy"
+  ],
+  "original_project_hash_check": {
+    "files": 336,
+    "changed": []
+  },
+  "long_simulation": {
+    "seconds": 600,
+    "signal_cycles": 8,
+    "finished_pedestrian_journeys": 247,
+    "pedestrian_crossings": 238,
+    "minimum_car_travel_m": 530.97,
+    "minimum_pedestrian_travel_m": 463.95,
+    "maximum_approximate_vehicle_box_overlap_m": 0.0355,
+    "result": "PASS"
+  },
+  "final_smoke": {
+    "seconds": 150,
+    "floor_probes": 1476,
+    "signal_cycles": 2,
+    "finished_pedestrian_journeys": 56,
+    "pedestrian_crossings": 65,
+    "approximate_vehicle_box_overlap_m": 0.0,
+    "result": "PASS"
+  },
+  "graphics_checks": {
+    "renderer": "AMD Radeon 780M / OpenGL Compatibility",
+    "street_samples": [
+      {
+        "visible_citizens": 13,
+        "fps": 38
+      },
+      {
+        "visible_citizens": 9,
+        "fps": 52
+      },
+      {
+        "visible_citizens": 8,
+        "fps": 59
+      }
+    ],
+    "note": "Observed samples, not a guarantee for every camera position."
+  },
+  "screenshots": [
+    "new_quarter_street.png",
+    "new_quarter_avenue.png",
+    "new_quarter_crossing.png",
+    "new_quarter_signal.png",
+    "new_quarter_courtyard.png",
+    "new_quarter_overview.png"
+  ]
+}

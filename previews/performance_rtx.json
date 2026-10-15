@@ -1,0 +1,67 @@
+{
+  "renderer": "NVIDIA GeForce RTX 2050",
+  "results": [
+    {
+      "cpu_ms": 14.5324069343066,
+      "draws": 554.585766423358,
+      "fps": 219.156081121343,
+      "median_ms": 3.649,
+      "p95_ms": 9.569,
+      "physics_ms": 6.59580474452549,
+      "primitives": 556673.02919708,
+      "scene": "courtyard"
+    },
+    {
+      "cpu_ms": 20.4977616279071,
+      "draws": 396.707364341085,
+      "fps": 206.205342157004,
+      "median_ms": 3.334,
+      "p95_ms": 16.138,
+      "physics_ms": 9.83597093023258,
+      "primitives": 403883.676356589,
+      "scene": "avenue"
+    },
+    {
+      "cpu_ms": 17.8796747141041,
+      "draws": 280.439644218551,
+      "fps": 314.514295214227,
+      "median_ms": 2.527,
+      "p95_ms": 6.533,
+      "physics_ms": 8.4385387547648,
+      "primitives": 305659.982210928,
+      "scene": "crossing"
+    },
+    {
+      "cpu_ms": 11.7214791208792,
+      "draws": 257.0,
+      "fps": 181.37187292967,
+      "median_ms": 5.332,
+      "p95_ms": 10.257,
+      "physics_ms": 1.65367912087913,
+      "primitives": 4992.0,
+      "scene": "home_0"
+    },
+    {
+      "cpu_ms": 15.9915870736086,
+      "draws": 206.0,
+      "fps": 221.507107316018,
+      "median_ms": 3.334,
+      "p95_ms": 10.005,
+      "physics_ms": 1.42051705565528,
+      "primitives": 6158.0,
+      "scene": "home_1"
+    },
+    {
+      "cpu_ms": 10.8875650485438,
+      "draws": 136.0,
+      "fps": 205.754822553445,
+      "median_ms": 4.152,
+      "p95_ms": 9.961,
+      "physics_ms": 0.473403883495143,
+      "primitives": 42651.0,
+      "scene": "shop"
+    }
+  ],
+  "size": "(1280, 800)",
+  "vsync": false
+}

@@ -1,0 +1,28 @@
+{
+  "shops": 3,
+  "locations": {
+    "BEREKE": "northwest",
+    "DÜKEN": "central west",
+    "KÖRŞI": "southeast"
+  },
+  "minimum_distance_between_shops_m": 53.605,
+  "playable_size_m": [
+    108,
+    140
+  ],
+  "previous_size_m": [
+    108,
+    124
+  ],
+  "building_instances": 102,
+  "walkable_destinations": 1667,
+  "entrances_connected": true,
+  "floor_probes": 1692,
+  "simulation_seconds": 600,
+  "minimum_vehicle_travel_m": 737.8367,
+  "maximum_stop_s": 40.85,
+  "junction_passages": 212,
+  "maximum_approximate_obb_overlap_m": 0.18665,
+  "result": "MAP_CHECK_PASS",
+  "backup": "backups/before-shops-extension"
+}

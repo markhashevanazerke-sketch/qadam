@@ -1,0 +1,97 @@
+{
+  "renderer": "AMD Radeon 780M Graphics (radeonsi, phoenix, ACO, DRM 3.64, 6.18.56-1-lts)",
+  "results": [
+    {
+      "cpu_ms": 22.869702970297,
+      "draws": 554.712871287129,
+      "fps": 40.3080975376142,
+      "median_ms": 25.085,
+      "p95_ms": 29.774,
+      "physics_ms": 6.39172277227723,
+      "primitives": 556823.633663366,
+      "scene": "courtyard"
+    },
+    {
+      "cpu_ms": 15.9332352941177,
+      "draws": 396.588235294118,
+      "fps": 67.7867429068152,
+      "median_ms": 15.053,
+      "p95_ms": 18.199,
+      "physics_ms": 7.7900117647059,
+      "primitives": 403820.141176471,
+      "scene": "avenue"
+    },
+    {
+      "cpu_ms": 24.1626832579185,
+      "draws": 280.411764705882,
+      "fps": 87.7904881985353,
+      "median_ms": 11.966,
+      "p95_ms": 16.044,
+      "physics_ms": 7.83169683257919,
+      "primitives": 305622.642533937,
+      "scene": "crossing"
+    },
+    {
+      "cpu_ms": 7.5712222222223,
+      "draws": 233.0,
+      "fps": 205.144775026563,
+      "median_ms": 4.973,
+      "p95_ms": 6.568,
+      "physics_ms": 0.785853801169598,
+      "primitives": 277691.0,
+      "scene": "no_people"
+    },
+    {
+      "cpu_ms": 7.18942939481262,
+      "draws": 118.0,
+      "fps": 277.348722057816,
+      "median_ms": 3.48,
+      "p95_ms": 5.234,
+      "physics_ms": 0.735132564841504,
+      "primitives": 132856.0,
+      "scene": "no_shadows"
+    },
+    {
+      "cpu_ms": 37.7961069587626,
+      "draws": 233.0,
+      "fps": 310.202091065901,
+      "median_ms": 3.153,
+      "p95_ms": 3.994,
+      "physics_ms": 0.643503865979374,
+      "primitives": 277691.0,
+      "scene": "simple_sky"
+    },
+    {
+      "cpu_ms": 31.8803091247673,
+      "draws": 257.0,
+      "fps": 214.679092734972,
+      "median_ms": 3.588,
+      "p95_ms": 10.926,
+      "physics_ms": 0.9002346368715,
+      "primitives": 4992.0,
+      "scene": "home_0"
+    },
+    {
+      "cpu_ms": 10.1227162162162,
+      "draws": 206.0,
+      "fps": 295.634595639789,
+      "median_ms": 3.218,
+      "p95_ms": 4.725,
+      "physics_ms": 0.272218918918926,
+      "primitives": 6158.0,
+      "scene": "home_1"
+    },
+    {
+      "cpu_ms": 8.78145161290315,
+      "draws": 136.0,
+      "fps": 260.04768739312,
+      "median_ms": 3.692,
+      "p95_ms": 5.512,
+      "physics_ms": 0.169958525345624,
+      "primitives": 42651.0,
+      "scene": "shop"
+    }
+  ],
+  "size": "(1280, 800)",
+  "vsync": false
+}

@@ -1,0 +1,676 @@
+{
+  "townhouse": [
+    {
+      "min": [
+        4.148298740386963,
+        0.46801918745040894,
+        -3.9169728755950928
+      ],
+      "max": [
+        5.24153470993042,
+        2.5618839263916016,
+        -3.875641345977783
+      ],
+      "center": [
+        4.694916725158691,
+        1.5149515867233276,
+        -3.8963069915771484
+      ],
+      "size": [
+        1.093235969543457,
+        2.093864679336548,
+        0.04133152961730957
+      ],
+      "normal": [
+        0.0,
+        -0.019735505804419518,
+        -0.9998052716255188
+      ],
+      "id": "townhouse_01",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        3.9451892375946045,
+        0.46801918745040894,
+        4.183472633361816
+      ],
+      "max": [
+        5.036551475524902,
+        2.5618839263916016,
+        4.223718643188477
+      ],
+      "center": [
+        4.490870475769043,
+        1.5149515867233276,
+        4.2035956382751465
+      ],
+      "size": [
+        1.0913622379302979,
+        2.093864679336548,
+        0.040246009826660156
+      ],
+      "normal": [
+        0.0,
+        -0.019217371940612793,
+        0.9998152852058411
+      ],
+      "id": "townhouse_02",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    }
+  ],
+  "solar_house": [
+    {
+      "min": [
+        0.12299691140651703,
+        0.20181141793727875,
+        -3.386737823486328
+      ],
+      "max": [
+        0.9752164483070374,
+        1.9062962532043457,
+        -3.3663148880004883
+      ],
+      "center": [
+        0.5491066575050354,
+        1.054053783416748,
+        -3.376526355743408
+      ],
+      "size": [
+        0.8522195219993591,
+        1.7044848203659058,
+        0.020422935485839844
+      ],
+      "normal": [
+        0.0,
+        -0.01198102068156004,
+        -0.9999281764030457
+      ],
+      "id": "solar_house_01",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    }
+  ],
+  "apartment": [
+    {
+      "min": [
+        -5.710514068603516,
+        0.0,
+        -5.367085933685303
+      ],
+      "max": [
+        -4.413294315338135,
+        2.5205259323120117,
+        -5.203120708465576
+      ],
+      "center": [
+        -5.061903953552246,
+        1.2602629661560059,
+        -5.2851033210754395
+      ],
+      "size": [
+        1.2972197532653809,
+        2.5205259323120117,
+        0.16396522521972656
+      ],
+      "normal": [
+        -0.0,
+        -0.0649147778749466,
+        -0.9978907704353333
+      ],
+      "id": "apartment_01",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        2.36413311958313,
+        0.0,
+        0.8463712930679321
+      ],
+      "max": [
+        2.4048004150390625,
+        2.5205259323120117,
+        2.142683744430542
+      ],
+      "center": [
+        2.3844666481018066,
+        1.2602629661560059,
+        1.4945275783538818
+      ],
+      "size": [
+        0.04066729545593262,
+        2.5205259323120117,
+        1.2963124513626099
+      ],
+      "normal": [
+        -0.9998698234558105,
+        0.016132349148392677,
+        0.0
+      ],
+      "id": "apartment_02",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        0.3573005199432373,
+        0.0,
+        -5.36130428314209
+      ],
+      "max": [
+        1.5864650011062622,
+        2.5205259323120117,
+        -5.197330951690674
+      ],
+      "center": [
+        0.9718827605247498,
+        1.2602629661560059,
+        -5.279317855834961
+      ],
+      "size": [
+        1.229164481163025,
+        2.5205259323120117,
+        0.16397333145141602
+      ],
+      "normal": [
+        -0.0,
+        -0.06491798162460327,
+        -0.9978905916213989
+      ],
+      "id": "apartment_03",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        7.550533294677734,
+        0.0,
+        2.83811354637146
+      ],
+      "max": [
+        7.679172992706299,
+        2.5205259323120117,
+        4.2019429206848145
+      ],
+      "center": [
+        7.6148529052734375,
+        1.2602629661560059,
+        3.5200281143188477
+      ],
+      "size": [
+        0.12863969802856445,
+        2.5205259323120117,
+        1.3638293743133545
+      ],
+      "normal": [
+        0.9987001419067383,
+        -0.05097050964832306,
+        0.0
+      ],
+      "id": "apartment_04",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        4.3560285568237305,
+        0.0,
+        5.070018768310547
+      ],
+      "max": [
+        5.653252124786377,
+        2.5205259323120117,
+        5.255201816558838
+      ],
+      "center": [
+        5.004640579223633,
+        1.2602629661560059,
+        5.162610054016113
+      ],
+      "size": [
+        1.2972235679626465,
+        2.5205259323120117,
+        0.18518304824829102
+      ],
+      "normal": [
+        0.0,
+        -0.07327251136302948,
+        0.9973119497299194
+      ],
+      "id": "apartment_05",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    }
+  ],
+  "shops": [
+    {
+      "min": [
+        2.70936918258667,
+        0.1076083779335022,
+        -2.064743995666504
+      ],
+      "max": [
+        3.863619565963745,
+        2.312263250350952,
+        -1.9780304431915283
+      ],
+      "center": [
+        3.286494255065918,
+        1.2099357843399048,
+        -2.0213871002197266
+      ],
+      "size": [
+        1.1542503833770752,
+        2.2046549320220947,
+        0.08671355247497559
+      ],
+      "normal": [
+        0.0,
+        -0.039301641285419464,
+        -0.9992274045944214
+      ],
+      "id": "shops_01",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        6.933501720428467,
+        0.0,
+        -0.61185622215271
+      ],
+      "max": [
+        7.024867057800293,
+        2.312263250350952,
+        0.5614191889762878
+      ],
+      "center": [
+        6.979184150695801,
+        1.156131625175476,
+        -0.02521851658821106
+      ],
+      "size": [
+        0.09136533737182617,
+        2.312263250350952,
+        1.1732754707336426
+      ],
+      "normal": [
+        0.9992203116416931,
+        -0.03948257118463516,
+        0.0
+      ],
+      "id": "shops_02",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        -6.1058807373046875,
+        0.0,
+        2.3912408351898193
+      ],
+      "max": [
+        -4.927267074584961,
+        2.312263250350952,
+        2.504502534866333
+      ],
+      "center": [
+        -5.516573905944824,
+        1.156131625175476,
+        2.447871685028076
+      ],
+      "size": [
+        1.1786136627197266,
+        2.312263250350952,
+        0.11326169967651367
+      ],
+      "normal": [
+        0.0,
+        -0.04892439395189285,
+        0.9988024830818176
+      ],
+      "id": "shops_03",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        3.1007180213928223,
+        0.0,
+        2.3912408351898193
+      ],
+      "max": [
+        4.257253170013428,
+        2.312263250350952,
+        2.504502534866333
+      ],
+      "center": [
+        3.678985595703125,
+        1.156131625175476,
+        2.447871685028076
+      ],
+      "size": [
+        1.1565351486206055,
+        2.312263250350952,
+        0.11326169967651367
+      ],
+      "normal": [
+        0.0,
+        -0.048924386501312256,
+        0.9988024830818176
+      ],
+      "id": "shops_04",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        0.3437635600566864,
+        0.0,
+        -2.55582594871521
+      ],
+      "max": [
+        1.464513897895813,
+        2.312263250350952,
+        -2.4416778087615967
+      ],
+      "center": [
+        0.9041387438774109,
+        1.156131625175476,
+        -2.4987518787384033
+      ],
+      "size": [
+        1.1207503080368042,
+        2.312263250350952,
+        0.11414813995361328
+      ],
+      "normal": [
+        0.0,
+        -0.049306370317935944,
+        -0.9987836480140686
+      ],
+      "id": "shops_05",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    }
+  ],
+  "round_tower": [
+    {
+      "min": [
+        5.41281270980835,
+        0.0,
+        -0.7978494763374329
+      ],
+      "max": [
+        5.55897855758667,
+        2.9498050212860107,
+        0.7990915179252625
+      ],
+      "center": [
+        5.48589563369751,
+        1.4749025106430054,
+        0.0006210207939147949
+      ],
+      "size": [
+        0.1461658477783203,
+        2.9498050212860107,
+        1.5969409942626953
+      ],
+      "normal": [
+        0.9987746477127075,
+        -0.0494903028011322,
+        0.0
+      ],
+      "id": "round_tower_01",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        -0.8636381030082703,
+        0.0,
+        5.478323459625244
+      ],
+      "max": [
+        0.7334796190261841,
+        2.9498050212860107,
+        5.623388767242432
+      ],
+      "center": [
+        -0.06507924199104309,
+        1.4749025106430054,
+        5.550856113433838
+      ],
+      "size": [
+        1.5971176624298096,
+        2.9498050212860107,
+        0.1450653076171875
+      ],
+      "normal": [
+        0.0,
+        -0.04911857098340988,
+        0.9987929463386536
+      ],
+      "id": "round_tower_02",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        -5.68806791305542,
+        0.0,
+        -0.7978494763374329
+      ],
+      "max": [
+        -5.541905879974365,
+        2.9498050212860107,
+        0.7990915179252625
+      ],
+      "center": [
+        -5.614986896514893,
+        1.4749025106430054,
+        0.0006210207939147949
+      ],
+      "size": [
+        0.1461620330810547,
+        2.9498050212860107,
+        1.5969409942626953
+      ],
+      "normal": [
+        -0.9987746477127075,
+        -0.049489010125398636,
+        -0.0
+      ],
+      "id": "round_tower_03",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        -0.8636381030082703,
+        0.0,
+        -5.623378753662109
+      ],
+      "max": [
+        0.7334796190261841,
+        2.9498050212860107,
+        -5.477081298828125
+      ],
+      "center": [
+        -0.06507924199104309,
+        1.4749025106430054,
+        -5.550230026245117
+      ],
+      "size": [
+        1.5971176624298096,
+        2.9498050212860107,
+        0.14629745483398438
+      ],
+      "normal": [
+        0.0,
+        -0.04953474551439285,
+        -0.998772382736206
+      ],
+      "id": "round_tower_04",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    }
+  ],
+  "square_tower": [
+    {
+      "min": [
+        -4.299452304840088,
+        0.0,
+        -0.8076605200767517
+      ],
+      "max": [
+        -4.193496227264404,
+        3.287961483001709,
+        0.8076704740524292
+      ],
+      "center": [
+        -4.246474266052246,
+        1.6439807415008545,
+        4.976987838745117e-06
+      ],
+      "size": [
+        0.1059560775756836,
+        3.287961483001709,
+        1.6153309345245361
+      ],
+      "normal": [
+        -0.9994811415672302,
+        -0.03220874071121216,
+        -0.0
+      ],
+      "id": "square_tower_01",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        -0.8082761168479919,
+        0.0,
+        4.193153381347656
+      ],
+      "max": [
+        0.8072286248207092,
+        3.287961483001709,
+        4.299213886260986
+      ],
+      "center": [
+        -0.0005237460136413574,
+        1.6439807415008545,
+        4.246183395385742
+      ],
+      "size": [
+        1.6155047416687012,
+        3.287961483001709,
+        0.10606050491333008
+      ],
+      "normal": [
+        0.0,
+        -0.032240454107522964,
+        0.999480128288269
+      ],
+      "id": "square_tower_02",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        4.193500995635986,
+        0.0,
+        -0.8076605200767517
+      ],
+      "max": [
+        4.298404693603516,
+        3.287961483001709,
+        0.8076704740524292
+      ],
+      "center": [
+        4.245952606201172,
+        1.6439807415008545,
+        4.976987838745117e-06
+      ],
+      "size": [
+        0.1049036979675293,
+        3.287961483001709,
+        1.6153309345245361
+      ],
+      "normal": [
+        0.9994913935661316,
+        -0.031889162957668304,
+        0.0
+      ],
+      "id": "square_tower_03",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    },
+    {
+      "min": [
+        -0.8082761168479919,
+        0.0,
+        -4.299213886260986
+      ],
+      "max": [
+        0.8072286248207092,
+        3.287961483001709,
+        -4.193153381347656
+      ],
+      "center": [
+        -0.0005237460136413574,
+        1.6439807415008545,
+        -4.246183395385742
+      ],
+      "size": [
+        1.6155047416687012,
+        3.287961483001709,
+        0.10606050491333008
+      ],
+      "normal": [
+        -0.0,
+        -0.032240454107522964,
+        -0.999480128288269
+      ],
+      "id": "square_tower_04",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    }
+  ],
+  "cartoon_shop": [
+    {
+      "center": [
+        1.45,
+        1.24,
+        0
+      ],
+      "min": [
+        1.4,
+        0.12,
+        -0.53
+      ],
+      "max": [
+        1.5,
+        2.38,
+        0.53
+      ],
+      "size": [
+        0.1,
+        2.26,
+        1.06
+      ],
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "id": "cartoon_shop_01",
+      "classification": "pedestrian_door",
+      "evidence": "Four facade views reviewed; authored dark door panel connected components, excluding windows, garage shutters and roof access."
+    }
+  ]
+}

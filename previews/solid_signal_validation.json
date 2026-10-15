@@ -1,0 +1,21 @@
+{
+  "main_signals": 8,
+  "pedestrian_heads": 4,
+  "turn_heads": 1,
+  "height_m": 3.605,
+  "model": "Kenney City Kit Roads 2.2",
+  "license": "CC0",
+  "old_sprite_panels_in_active_signals": false,
+  "visual_checks": [
+    "solid_signals_front.png",
+    "solid_signals_back.png",
+    "solid_signals_close.png",
+    "solid_signals_pedestrian.png",
+    "new_quarter_signal.png"
+  ],
+  "map_check": "MAP_CHECK_PASS",
+  "simulation_seconds": 150,
+  "minimum_vehicle_distance_m": 169.7646,
+  "max_stop_s": 37.05,
+  "junction_passages": 50
+}

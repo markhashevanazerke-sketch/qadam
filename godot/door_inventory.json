@@ -1,0 +1,4398 @@
+{
+  "accessible": 145,
+  "by_model": {
+    "apartment": 66,
+    "cartoon_shop": 3,
+    "round_tower": 8,
+    "shops": 36,
+    "solar_house": 2,
+    "square_tower": 30,
+    "townhouse": 6
+  },
+  "doors": [
+    {
+      "building": "townhouse",
+      "building_index": 0,
+      "id": "B000_townhouse_01",
+      "interaction_exists": false,
+      "landing_world": [
+        -9.473,
+        0.574,
+        -44.611
+      ],
+      "model": "townhouse",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -7.287,
+        1.454,
+        -33.663
+      ],
+      "position_world": [
+        -9.473,
+        1.89,
+        -43.761
+      ],
+      "status": "accessible",
+      "template": "townhouse_01"
+    },
+    {
+      "building": "townhouse",
+      "building_index": 0,
+      "id": "B000_townhouse_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -9.722,
+        0.08,
+        -33.013
+      ],
+      "model": "townhouse",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -7.479,
+        1.454,
+        -26.049
+      ],
+      "position_world": [
+        -9.722,
+        1.89,
+        -33.863
+      ],
+      "status": "accessible",
+      "template": "townhouse_02"
+    },
+    {
+      "building": "solar_house",
+      "building_index": 1,
+      "id": "B001_solar_house_01",
+      "interaction_exists": false,
+      "landing_world": [
+        14.482,
+        0.119,
+        -33.323
+      ],
+      "model": "solar_house",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        11.14,
+        1.105,
+        -26.556
+      ],
+      "position_world": [
+        14.482,
+        1.437,
+        -34.523
+      ],
+      "status": "accessible",
+      "template": "solar_house_01"
+    },
+    {
+      "building": "apartment",
+      "building_index": 2,
+      "id": "B002_apartment_01",
+      "interaction_exists": false,
+      "landing_world": [
+        -8.893,
+        0.08,
+        46.446
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -6.841,
+        1.24,
+        35.074
+      ],
+      "position_world": [
+        -8.893,
+        1.612,
+        45.596
+      ],
+      "status": "accessible",
+      "template": "apartment_01"
+    },
+    {
+      "building": "apartment",
+      "building_index": 2,
+      "id": "B002_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -17.336,
+        0.08,
+        37.135
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -13.989,
+        1.24,
+        28.565
+      ],
+      "position_world": [
+        -18.186,
+        1.612,
+        37.135
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 2,
+      "id": "B002_apartment_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -16.423,
+        0.08,
+        46.439
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -12.633,
+        1.24,
+        35.068
+      ],
+      "position_world": [
+        -16.423,
+        1.612,
+        45.589
+      ],
+      "status": "accessible",
+      "template": "apartment_03"
+    },
+    {
+      "building": "apartment",
+      "building_index": 2,
+      "id": "B002_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -25.563,
+        0.08,
+        34.607
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -19.01,
+        1.24,
+        26.621
+      ],
+      "position_world": [
+        -24.713,
+        1.612,
+        34.607
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 2,
+      "id": "B002_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        -21.456,
+        0.08,
+        31.707
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -16.504,
+        1.24,
+        25.044
+      ],
+      "position_world": [
+        -21.456,
+        1.612,
+        32.557
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "shops",
+      "building_index": 3,
+      "id": "B003_shops_01",
+      "interaction_exists": false,
+      "landing_world": [
+        20.038,
+        0.08,
+        35.181
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        15.414,
+        1.397,
+        27.716
+      ],
+      "position_world": [
+        20.038,
+        1.816,
+        36.031
+      ],
+      "status": "accessible",
+      "template": "shops_01"
+    },
+    {
+      "building": "shops",
+      "building_index": 3,
+      "id": "B003_shops_02",
+      "interaction_exists": false,
+      "landing_world": [
+        26.312,
+        0.08,
+        38.963
+      ],
+      "model": "shops",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        19.586,
+        1.336,
+        29.972
+      ],
+      "position_world": [
+        25.462,
+        1.737,
+        38.963
+      ],
+      "status": "accessible",
+      "template": "shops_02"
+    },
+    {
+      "building": "shops",
+      "building_index": 3,
+      "id": "B003_shops_03",
+      "interaction_exists": false,
+      "landing_world": [
+        7.106,
+        0.08,
+        43.446
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        5.466,
+        1.336,
+        32.766
+      ],
+      "position_world": [
+        7.106,
+        1.737,
+        42.596
+      ],
+      "status": "accessible",
+      "template": "shops_03"
+    },
+    {
+      "building": "shops",
+      "building_index": 3,
+      "id": "B003_shops_04",
+      "interaction_exists": false,
+      "landing_world": [
+        20.614,
+        0.08,
+        43.446
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        15.857,
+        1.336,
+        32.766
+      ],
+      "position_world": [
+        20.614,
+        1.737,
+        42.596
+      ],
+      "status": "accessible",
+      "template": "shops_04"
+    },
+    {
+      "building": "shops",
+      "building_index": 3,
+      "id": "B003_shops_05",
+      "interaction_exists": false,
+      "landing_world": [
+        16.538,
+        0.08,
+        34.479
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        12.722,
+        1.336,
+        27.176
+      ],
+      "position_world": [
+        16.538,
+        1.737,
+        35.329
+      ],
+      "status": "accessible",
+      "template": "shops_05"
+    },
+    {
+      "building": "shops",
+      "building_index": 4,
+      "id": "B004_shops_01",
+      "interaction_exists": false,
+      "landing_world": [
+        -10.51,
+        0.08,
+        -19.341
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -8.085,
+        1.361,
+        -14.224
+      ],
+      "position_world": [
+        -10.51,
+        1.769,
+        -18.491
+      ],
+      "status": "accessible",
+      "template": "shops_01"
+    },
+    {
+      "building": "shops",
+      "building_index": 4,
+      "id": "B004_shops_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -4.38,
+        0.08,
+        -15.636
+      ],
+      "model": "shops",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -4.023,
+        1.302,
+        -12.028
+      ],
+      "position_world": [
+        -5.23,
+        1.692,
+        -15.636
+      ],
+      "status": "accessible",
+      "template": "shops_02"
+    },
+    {
+      "building": "shops",
+      "building_index": 4,
+      "id": "B004_shops_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -23.099,
+        0.08,
+        -11.25
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -17.768,
+        1.302,
+        -9.307
+      ],
+      "position_world": [
+        -23.099,
+        1.692,
+        -12.1
+      ],
+      "status": "accessible",
+      "template": "shops_03"
+    },
+    {
+      "building": "shops",
+      "building_index": 4,
+      "id": "B004_shops_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -9.949,
+        0.08,
+        -11.25
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -7.653,
+        1.302,
+        -9.307
+      ],
+      "position_world": [
+        -9.949,
+        1.692,
+        -12.1
+      ],
+      "status": "accessible",
+      "template": "shops_04"
+    },
+    {
+      "building": "shops",
+      "building_index": 4,
+      "id": "B004_shops_05",
+      "interaction_exists": false,
+      "landing_world": [
+        -13.917,
+        0.08,
+        -20.023
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -10.705,
+        1.302,
+        -14.749
+      ],
+      "position_world": [
+        -13.917,
+        1.692,
+        -19.173
+      ],
+      "status": "accessible",
+      "template": "shops_05"
+    },
+    {
+      "building": "townhouse",
+      "building_index": 5,
+      "id": "B005_townhouse_01",
+      "interaction_exists": false,
+      "landing_world": [
+        9.473,
+        0.574,
+        -9.989
+      ],
+      "model": "townhouse",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        7.287,
+        1.454,
+        -8.337
+      ],
+      "position_world": [
+        9.473,
+        1.89,
+        -10.839
+      ],
+      "status": "accessible",
+      "template": "townhouse_01"
+    },
+    {
+      "building": "townhouse",
+      "building_index": 5,
+      "id": "B005_townhouse_02",
+      "interaction_exists": false,
+      "landing_world": [
+        9.722,
+        0.08,
+        -21.587
+      ],
+      "model": "townhouse",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        7.479,
+        1.454,
+        -15.951
+      ],
+      "position_world": [
+        9.722,
+        1.89,
+        -20.737
+      ],
+      "status": "accessible",
+      "template": "townhouse_02"
+    },
+    {
+      "building": "solar_house",
+      "building_index": 6,
+      "id": "B006_solar_house_01",
+      "interaction_exists": false,
+      "landing_world": [
+        -14.496,
+        0.119,
+        11.311
+      ],
+      "model": "solar_house",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -11.151,
+        1.084,
+        9.623
+      ],
+      "position_world": [
+        -14.496,
+        1.409,
+        12.511
+      ],
+      "status": "accessible",
+      "template": "solar_house_01"
+    },
+    {
+      "building": "apartment",
+      "building_index": 7,
+      "id": "B007_apartment_01",
+      "interaction_exists": false,
+      "landing_world": [
+        21.527,
+        0.08,
+        24.346
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        16.559,
+        1.24,
+        18.074
+      ],
+      "position_world": [
+        21.527,
+        1.612,
+        23.496
+      ],
+      "status": "accessible",
+      "template": "apartment_01"
+    },
+    {
+      "building": "apartment",
+      "building_index": 7,
+      "id": "B007_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        13.084,
+        0.08,
+        15.035
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        9.411,
+        1.24,
+        11.565
+      ],
+      "position_world": [
+        12.234,
+        1.612,
+        15.035
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 7,
+      "id": "B007_apartment_03",
+      "interaction_exists": false,
+      "landing_world": [
+        13.997,
+        0.08,
+        24.339
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        10.767,
+        1.24,
+        18.068
+      ],
+      "position_world": [
+        13.997,
+        1.612,
+        23.489
+      ],
+      "status": "accessible",
+      "template": "apartment_03"
+    },
+    {
+      "building": "apartment",
+      "building_index": 7,
+      "id": "B007_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        4.857,
+        0.08,
+        12.507
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        4.39,
+        1.24,
+        9.621
+      ],
+      "position_world": [
+        5.707,
+        1.612,
+        12.507
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 7,
+      "id": "B007_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        8.964,
+        0.08,
+        9.607
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        6.896,
+        1.24,
+        8.044
+      ],
+      "position_world": [
+        8.964,
+        1.612,
+        10.457
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "BEREKE",
+      "building_index": 8,
+      "id": "B008_cartoon_shop_01",
+      "interaction_exists": true,
+      "landing_world": [
+        -44.755,
+        0.08,
+        -60.45
+      ],
+      "model": "cartoon_shop",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -35.35,
+        1.275,
+        -46.5
+      ],
+      "position_world": [
+        -45.955,
+        1.658,
+        -60.45
+      ],
+      "status": "accessible",
+      "template": "cartoon_shop_01"
+    },
+    {
+      "building": "DÜKEN",
+      "building_index": 9,
+      "id": "B009_cartoon_shop_01",
+      "interaction_exists": true,
+      "landing_world": [
+        -44.755,
+        0.08,
+        0.0
+      ],
+      "model": "cartoon_shop",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -35.35,
+        1.275,
+        0.0
+      ],
+      "position_world": [
+        -45.955,
+        1.658,
+        0.0
+      ],
+      "status": "accessible",
+      "template": "cartoon_shop_01"
+    },
+    {
+      "building": "KÖRŞI",
+      "building_index": 10,
+      "id": "B010_cartoon_shop_01",
+      "interaction_exists": true,
+      "landing_world": [
+        43.585,
+        0.08,
+        58.149
+      ],
+      "model": "cartoon_shop",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        34.45,
+        1.275,
+        44.73
+      ],
+      "position_world": [
+        44.785,
+        1.658,
+        58.149
+      ],
+      "status": "accessible",
+      "template": "cartoon_shop_01"
+    },
+    {
+      "building": "round_tower",
+      "building_index": 11,
+      "id": "B011_round_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        -45.968,
+        0.08,
+        -75.399
+      ],
+      "model": "round_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -36.014,
+        1.505,
+        -57.999
+      ],
+      "position_world": [
+        -46.818,
+        1.956,
+        -75.399
+      ],
+      "status": "accessible",
+      "template": "round_tower_01"
+    },
+    {
+      "building": "round_tower",
+      "building_index": 11,
+      "id": "B011_round_tower_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -54.035,
+        0.08,
+        -67.334
+      ],
+      "model": "round_tower",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -41.565,
+        1.505,
+        -52.449
+      ],
+      "position_world": [
+        -54.035,
+        1.956,
+        -68.184
+      ],
+      "status": "accessible",
+      "template": "round_tower_02"
+    },
+    {
+      "building": "round_tower",
+      "building_index": 11,
+      "id": "B011_round_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -62.099,
+        0.08,
+        -75.399
+      ],
+      "model": "round_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -47.115,
+        1.505,
+        -57.999
+      ],
+      "position_world": [
+        -61.249,
+        1.956,
+        -75.399
+      ],
+      "status": "accessible",
+      "template": "round_tower_03"
+    },
+    {
+      "building": "round_tower",
+      "building_index": 11,
+      "id": "B011_round_tower_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -54.035,
+        0.08,
+        -85.415
+      ],
+      "model": "round_tower",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -41.565,
+        1.505,
+        -63.55
+      ],
+      "position_world": [
+        -54.035,
+        1.956,
+        -82.615
+      ],
+      "status": "landing_clear_route_unconfirmed",
+      "template": "round_tower_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 12,
+      "id": "B012_apartment_01",
+      "interaction_exists": false,
+      "landing_world": [
+        -61.671,
+        0.08,
+        -35.02
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -46.785,
+        1.29,
+        -26.938
+      ],
+      "position_world": [
+        -60.821,
+        1.677,
+        -35.02
+      ],
+      "status": "accessible",
+      "template": "apartment_01"
+    },
+    {
+      "building": "apartment",
+      "building_index": 12,
+      "id": "B012_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -52.007,
+        0.08,
+        -43.85
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -40.005,
+        1.29,
+        -34.384
+      ],
+      "position_world": [
+        -52.007,
+        1.677,
+        -44.7
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 12,
+      "id": "B012_apartment_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -61.663,
+        0.08,
+        -42.863
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -46.779,
+        1.29,
+        -32.972
+      ],
+      "position_world": [
+        -60.813,
+        1.677,
+        -42.863
+      ],
+      "status": "accessible",
+      "template": "apartment_03"
+    },
+    {
+      "building": "apartment",
+      "building_index": 12,
+      "id": "B012_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -49.374,
+        0.08,
+        -52.349
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -37.98,
+        1.29,
+        -39.615
+      ],
+      "position_world": [
+        -49.374,
+        1.677,
+        -51.499
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 12,
+      "id": "B012_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        -46.389,
+        0.08,
+        -48.106
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -36.337,
+        1.29,
+        -37.005
+      ],
+      "position_world": [
+        -47.239,
+        1.677,
+        -48.106
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "shops",
+      "building_index": 13,
+      "id": "B013_shops_01",
+      "interaction_exists": false,
+      "landing_world": [
+        -57.428,
+        0.08,
+        -21.822
+      ],
+      "model": "shops",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -43.521,
+        1.24,
+        -16.786
+      ],
+      "position_world": [
+        -56.578,
+        1.612,
+        -21.822
+      ],
+      "status": "accessible",
+      "template": "shops_01"
+    },
+    {
+      "building": "shops",
+      "building_index": 13,
+      "id": "B013_shops_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -53.983,
+        0.08,
+        -27.473
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -41.525,
+        1.186,
+        -20.479
+      ],
+      "position_world": [
+        -53.983,
+        1.542,
+        -26.623
+      ],
+      "status": "accessible",
+      "template": "shops_02"
+    },
+    {
+      "building": "shops",
+      "building_index": 13,
+      "id": "B013_shops_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -49.918,
+        0.08,
+        -10.378
+      ],
+      "model": "shops",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -39.052,
+        1.186,
+        -7.983
+      ],
+      "position_world": [
+        -50.768,
+        1.542,
+        -10.378
+      ],
+      "status": "accessible",
+      "template": "shops_03"
+    },
+    {
+      "building": "shops",
+      "building_index": 13,
+      "id": "B013_shops_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -49.918,
+        0.08,
+        -22.333
+      ],
+      "model": "shops",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -39.052,
+        1.186,
+        -17.179
+      ],
+      "position_world": [
+        -50.768,
+        1.542,
+        -22.333
+      ],
+      "status": "accessible",
+      "template": "shops_04"
+    },
+    {
+      "building": "shops",
+      "building_index": 13,
+      "id": "B013_shops_05",
+      "interaction_exists": false,
+      "landing_world": [
+        -58.048,
+        0.08,
+        -18.725
+      ],
+      "model": "shops",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -43.999,
+        1.186,
+        -14.404
+      ],
+      "position_world": [
+        -57.198,
+        1.542,
+        -18.725
+      ],
+      "status": "accessible",
+      "template": "shops_05"
+    },
+    {
+      "building": "apartment",
+      "building_index": 14,
+      "id": "B014_apartment_01",
+      "interaction_exists": false,
+      "landing_world": [
+        -61.671,
+        0.08,
+        26.73
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -46.785,
+        1.29,
+        20.562
+      ],
+      "position_world": [
+        -60.821,
+        1.677,
+        26.73
+      ],
+      "status": "accessible",
+      "template": "apartment_01"
+    },
+    {
+      "building": "apartment",
+      "building_index": 14,
+      "id": "B014_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -52.007,
+        0.08,
+        17.9
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -40.005,
+        1.29,
+        13.116
+      ],
+      "position_world": [
+        -52.007,
+        1.677,
+        17.05
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 14,
+      "id": "B014_apartment_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -61.663,
+        0.08,
+        18.887
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -46.779,
+        1.29,
+        14.528
+      ],
+      "position_world": [
+        -60.813,
+        1.677,
+        18.887
+      ],
+      "status": "accessible",
+      "template": "apartment_03"
+    },
+    {
+      "building": "apartment",
+      "building_index": 14,
+      "id": "B014_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -49.374,
+        0.08,
+        9.401
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -37.98,
+        1.29,
+        7.885
+      ],
+      "position_world": [
+        -49.374,
+        1.677,
+        10.251
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 14,
+      "id": "B014_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        -46.389,
+        0.08,
+        13.644
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -36.337,
+        1.29,
+        10.495
+      ],
+      "position_world": [
+        -47.239,
+        1.677,
+        13.644
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "shops",
+      "building_index": 15,
+      "id": "B015_shops_01",
+      "interaction_exists": false,
+      "landing_world": [
+        -49.678,
+        0.08,
+        43.322
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -38.214,
+        1.24,
+        33.979
+      ],
+      "position_world": [
+        -49.678,
+        1.612,
+        44.172
+      ],
+      "status": "accessible",
+      "template": "shops_01"
+    },
+    {
+      "building": "shops",
+      "building_index": 15,
+      "id": "B015_shops_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -44.027,
+        0.08,
+        46.767
+      ],
+      "model": "shops",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -34.521,
+        1.186,
+        35.975
+      ],
+      "position_world": [
+        -44.877,
+        1.542,
+        46.767
+      ],
+      "status": "accessible",
+      "template": "shops_02"
+    },
+    {
+      "building": "shops",
+      "building_index": 15,
+      "id": "B015_shops_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -61.122,
+        0.08,
+        50.832
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -47.017,
+        1.186,
+        38.448
+      ],
+      "position_world": [
+        -61.122,
+        1.542,
+        49.982
+      ],
+      "status": "accessible",
+      "template": "shops_03"
+    },
+    {
+      "building": "shops",
+      "building_index": 15,
+      "id": "B015_shops_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -49.167,
+        0.08,
+        50.832
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -37.821,
+        1.186,
+        38.448
+      ],
+      "position_world": [
+        -49.167,
+        1.542,
+        49.982
+      ],
+      "status": "accessible",
+      "template": "shops_04"
+    },
+    {
+      "building": "shops",
+      "building_index": 15,
+      "id": "B015_shops_05",
+      "interaction_exists": false,
+      "landing_world": [
+        -52.775,
+        0.08,
+        42.702
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -40.596,
+        1.186,
+        33.501
+      ],
+      "position_world": [
+        -52.775,
+        1.542,
+        43.552
+      ],
+      "status": "accessible",
+      "template": "shops_05"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 16,
+      "id": "B016_square_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        -60.32,
+        0.08,
+        70.2
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -45.746,
+        1.674,
+        54.0
+      ],
+      "position_world": [
+        -59.47,
+        2.176,
+        70.2
+      ],
+      "status": "accessible",
+      "template": "square_tower_01"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 16,
+      "id": "B016_square_tower_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -53.951,
+        0.08,
+        76.57
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -41.501,
+        1.674,
+        58.246
+      ],
+      "position_world": [
+        -53.951,
+        2.176,
+        75.72
+      ],
+      "status": "accessible",
+      "template": "square_tower_02"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 16,
+      "id": "B016_square_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -47.58,
+        0.08,
+        70.2
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -37.254,
+        1.674,
+        54.0
+      ],
+      "position_world": [
+        -48.43,
+        2.176,
+        70.2
+      ],
+      "status": "accessible",
+      "template": "square_tower_03"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 16,
+      "id": "B016_square_tower_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -53.951,
+        0.08,
+        63.83
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -41.501,
+        1.674,
+        49.754
+      ],
+      "position_world": [
+        -53.951,
+        2.176,
+        64.68
+      ],
+      "status": "accessible",
+      "template": "square_tower_04"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 19,
+      "id": "B019_square_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -67.65,
+        0.08,
+        -78.0
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -52.693,
+        2.229,
+        -60.0
+      ],
+      "position_world": [
+        -68.5,
+        2.897,
+        -78.0
+      ],
+      "status": "accessible",
+      "template": "square_tower_03"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 20,
+      "id": "B020_square_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -67.65,
+        0.08,
+        -62.4
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -52.693,
+        2.475,
+        -48.0
+      ],
+      "position_world": [
+        -68.5,
+        3.218,
+        -62.4
+      ],
+      "status": "accessible",
+      "template": "square_tower_03"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 21,
+      "id": "B021_square_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -67.65,
+        0.08,
+        -46.8
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -52.693,
+        1.736,
+        -36.0
+      ],
+      "position_world": [
+        -68.5,
+        2.256,
+        -46.8
+      ],
+      "status": "accessible",
+      "template": "square_tower_03"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 22,
+      "id": "B022_square_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -67.65,
+        0.08,
+        -31.2
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -52.693,
+        1.982,
+        -24.0
+      ],
+      "position_world": [
+        -68.5,
+        2.577,
+        -31.2
+      ],
+      "status": "accessible",
+      "template": "square_tower_03"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 23,
+      "id": "B023_square_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -67.65,
+        0.08,
+        -15.6
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -52.693,
+        2.229,
+        -12.0
+      ],
+      "position_world": [
+        -68.5,
+        2.897,
+        -15.6
+      ],
+      "status": "accessible",
+      "template": "square_tower_03"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 24,
+      "id": "B024_square_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -67.65,
+        0.08,
+        0.0
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -52.693,
+        2.475,
+        0.0
+      ],
+      "position_world": [
+        -68.5,
+        3.218,
+        0.0
+      ],
+      "status": "accessible",
+      "template": "square_tower_03"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 25,
+      "id": "B025_square_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -67.65,
+        0.08,
+        15.6
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -52.693,
+        1.736,
+        12.0
+      ],
+      "position_world": [
+        -68.5,
+        2.256,
+        15.6
+      ],
+      "status": "accessible",
+      "template": "square_tower_03"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 26,
+      "id": "B026_square_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -67.65,
+        0.08,
+        31.2
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -52.693,
+        1.982,
+        24.0
+      ],
+      "position_world": [
+        -68.5,
+        2.577,
+        31.2
+      ],
+      "status": "accessible",
+      "template": "square_tower_03"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 27,
+      "id": "B027_square_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -67.65,
+        0.08,
+        46.8
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -52.693,
+        2.229,
+        36.0
+      ],
+      "position_world": [
+        -68.5,
+        2.897,
+        46.8
+      ],
+      "status": "accessible",
+      "template": "square_tower_03"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 28,
+      "id": "B028_square_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -67.65,
+        0.08,
+        62.4
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -52.693,
+        2.475,
+        48.0
+      ],
+      "position_world": [
+        -68.5,
+        3.218,
+        62.4
+      ],
+      "status": "accessible",
+      "template": "square_tower_03"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 29,
+      "id": "B029_square_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -67.65,
+        0.08,
+        78.0
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -52.693,
+        1.736,
+        60.0
+      ],
+      "position_world": [
+        -68.5,
+        2.256,
+        78.0
+      ],
+      "status": "accessible",
+      "template": "square_tower_03"
+    },
+    {
+      "building": "round_tower",
+      "building_index": 41,
+      "id": "B041_round_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        61.932,
+        0.08,
+        -70.199
+      ],
+      "model": "round_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        46.986,
+        1.505,
+        -53.999
+      ],
+      "position_world": [
+        61.082,
+        1.956,
+        -70.199
+      ],
+      "status": "accessible",
+      "template": "round_tower_01"
+    },
+    {
+      "building": "round_tower",
+      "building_index": 41,
+      "id": "B041_round_tower_02",
+      "interaction_exists": false,
+      "landing_world": [
+        53.865,
+        0.08,
+        -62.134
+      ],
+      "model": "round_tower",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        41.435,
+        1.505,
+        -48.449
+      ],
+      "position_world": [
+        53.865,
+        1.956,
+        -62.984
+      ],
+      "status": "accessible",
+      "template": "round_tower_02"
+    },
+    {
+      "building": "round_tower",
+      "building_index": 41,
+      "id": "B041_round_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        45.801,
+        0.08,
+        -70.199
+      ],
+      "model": "round_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        35.885,
+        1.505,
+        -53.999
+      ],
+      "position_world": [
+        46.651,
+        1.956,
+        -70.199
+      ],
+      "status": "accessible",
+      "template": "round_tower_03"
+    },
+    {
+      "building": "round_tower",
+      "building_index": 41,
+      "id": "B041_round_tower_04",
+      "interaction_exists": false,
+      "landing_world": [
+        53.865,
+        0.08,
+        -78.265
+      ],
+      "model": "round_tower",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        41.435,
+        1.505,
+        -59.55
+      ],
+      "position_world": [
+        53.865,
+        1.956,
+        -77.415
+      ],
+      "status": "accessible",
+      "template": "round_tower_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 42,
+      "id": "B042_apartment_01",
+      "interaction_exists": false,
+      "landing_world": [
+        46.229,
+        0.08,
+        -40.22
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        36.215,
+        1.29,
+        -30.938
+      ],
+      "position_world": [
+        47.079,
+        1.677,
+        -40.22
+      ],
+      "status": "accessible",
+      "template": "apartment_01"
+    },
+    {
+      "building": "apartment",
+      "building_index": 42,
+      "id": "B042_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        55.893,
+        0.08,
+        -49.05
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        42.995,
+        1.29,
+        -38.384
+      ],
+      "position_world": [
+        55.893,
+        1.677,
+        -49.9
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 42,
+      "id": "B042_apartment_03",
+      "interaction_exists": false,
+      "landing_world": [
+        46.237,
+        0.08,
+        -48.063
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        36.221,
+        1.29,
+        -36.972
+      ],
+      "position_world": [
+        47.087,
+        1.677,
+        -48.063
+      ],
+      "status": "accessible",
+      "template": "apartment_03"
+    },
+    {
+      "building": "apartment",
+      "building_index": 42,
+      "id": "B042_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        58.526,
+        0.08,
+        -57.549
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        45.02,
+        1.29,
+        -43.615
+      ],
+      "position_world": [
+        58.526,
+        1.677,
+        -56.699
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 42,
+      "id": "B042_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        61.511,
+        0.08,
+        -53.306
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        46.663,
+        1.29,
+        -41.005
+      ],
+      "position_world": [
+        60.661,
+        1.677,
+        -53.306
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "shops",
+      "building_index": 43,
+      "id": "B043_shops_01",
+      "interaction_exists": false,
+      "landing_world": [
+        50.472,
+        0.08,
+        -27.672
+      ],
+      "model": "shops",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        39.479,
+        1.24,
+        -21.286
+      ],
+      "position_world": [
+        51.322,
+        1.612,
+        -27.672
+      ],
+      "status": "accessible",
+      "template": "shops_01"
+    },
+    {
+      "building": "shops",
+      "building_index": 43,
+      "id": "B043_shops_02",
+      "interaction_exists": false,
+      "landing_world": [
+        53.917,
+        0.08,
+        -33.323
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        41.475,
+        1.186,
+        -24.979
+      ],
+      "position_world": [
+        53.917,
+        1.542,
+        -32.473
+      ],
+      "status": "accessible",
+      "template": "shops_02"
+    },
+    {
+      "building": "shops",
+      "building_index": 43,
+      "id": "B043_shops_03",
+      "interaction_exists": false,
+      "landing_world": [
+        57.982,
+        0.08,
+        -16.228
+      ],
+      "model": "shops",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        43.948,
+        1.186,
+        -12.483
+      ],
+      "position_world": [
+        57.132,
+        1.542,
+        -16.228
+      ],
+      "status": "accessible",
+      "template": "shops_03"
+    },
+    {
+      "building": "shops",
+      "building_index": 43,
+      "id": "B043_shops_04",
+      "interaction_exists": false,
+      "landing_world": [
+        57.982,
+        0.08,
+        -28.183
+      ],
+      "model": "shops",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        43.948,
+        1.186,
+        -21.679
+      ],
+      "position_world": [
+        57.132,
+        1.542,
+        -28.183
+      ],
+      "status": "accessible",
+      "template": "shops_04"
+    },
+    {
+      "building": "shops",
+      "building_index": 43,
+      "id": "B043_shops_05",
+      "interaction_exists": false,
+      "landing_world": [
+        49.852,
+        0.08,
+        -24.575
+      ],
+      "model": "shops",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        39.001,
+        1.186,
+        -18.904
+      ],
+      "position_world": [
+        50.702,
+        1.542,
+        -24.575
+      ],
+      "status": "accessible",
+      "template": "shops_05"
+    },
+    {
+      "building": "townhouse",
+      "building_index": 44,
+      "id": "B044_townhouse_01",
+      "interaction_exists": false,
+      "landing_world": [
+        48.035,
+        0.603,
+        -6.103
+      ],
+      "model": "townhouse",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        37.604,
+        1.545,
+        -4.695
+      ],
+      "position_world": [
+        48.885,
+        2.008,
+        -6.103
+      ],
+      "status": "accessible",
+      "template": "townhouse_01"
+    },
+    {
+      "building": "townhouse",
+      "building_index": 44,
+      "id": "B044_townhouse_02",
+      "interaction_exists": false,
+      "landing_world": [
+        60.265,
+        0.08,
+        -5.838
+      ],
+      "model": "townhouse",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        45.704,
+        1.545,
+        -4.491
+      ],
+      "position_world": [
+        59.415,
+        2.008,
+        -5.838
+      ],
+      "status": "accessible",
+      "template": "townhouse_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 45,
+      "id": "B045_apartment_01",
+      "interaction_exists": false,
+      "landing_world": [
+        46.229,
+        0.08,
+        29.98
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        36.215,
+        1.29,
+        23.062
+      ],
+      "position_world": [
+        47.079,
+        1.677,
+        29.98
+      ],
+      "status": "accessible",
+      "template": "apartment_01"
+    },
+    {
+      "building": "apartment",
+      "building_index": 45,
+      "id": "B045_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        55.893,
+        0.08,
+        21.15
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        42.995,
+        1.29,
+        15.616
+      ],
+      "position_world": [
+        55.893,
+        1.677,
+        20.3
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 45,
+      "id": "B045_apartment_03",
+      "interaction_exists": false,
+      "landing_world": [
+        46.237,
+        0.08,
+        22.137
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        36.221,
+        1.29,
+        17.028
+      ],
+      "position_world": [
+        47.087,
+        1.677,
+        22.137
+      ],
+      "status": "accessible",
+      "template": "apartment_03"
+    },
+    {
+      "building": "apartment",
+      "building_index": 45,
+      "id": "B045_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        58.526,
+        0.08,
+        12.651
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        45.02,
+        1.29,
+        10.385
+      ],
+      "position_world": [
+        58.526,
+        1.677,
+        13.501
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 45,
+      "id": "B045_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        61.511,
+        0.08,
+        16.894
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        46.663,
+        1.29,
+        12.995
+      ],
+      "position_world": [
+        60.661,
+        1.677,
+        16.894
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "shops",
+      "building_index": 46,
+      "id": "B046_shops_01",
+      "interaction_exists": false,
+      "landing_world": [
+        58.222,
+        0.08,
+        43.322
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        44.786,
+        1.24,
+        33.979
+      ],
+      "position_world": [
+        58.222,
+        1.612,
+        44.172
+      ],
+      "status": "accessible",
+      "template": "shops_01"
+    },
+    {
+      "building": "shops",
+      "building_index": 46,
+      "id": "B046_shops_02",
+      "interaction_exists": false,
+      "landing_world": [
+        63.873,
+        0.08,
+        46.767
+      ],
+      "model": "shops",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        48.479,
+        1.186,
+        35.975
+      ],
+      "position_world": [
+        63.023,
+        1.542,
+        46.767
+      ],
+      "status": "accessible",
+      "template": "shops_02"
+    },
+    {
+      "building": "shops",
+      "building_index": 46,
+      "id": "B046_shops_03",
+      "interaction_exists": false,
+      "landing_world": [
+        46.778,
+        0.08,
+        50.832
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        35.983,
+        1.186,
+        38.448
+      ],
+      "position_world": [
+        46.778,
+        1.542,
+        49.982
+      ],
+      "status": "accessible",
+      "template": "shops_03"
+    },
+    {
+      "building": "shops",
+      "building_index": 46,
+      "id": "B046_shops_04",
+      "interaction_exists": false,
+      "landing_world": [
+        58.733,
+        0.08,
+        50.832
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        45.179,
+        1.186,
+        38.448
+      ],
+      "position_world": [
+        58.733,
+        1.542,
+        49.982
+      ],
+      "status": "accessible",
+      "template": "shops_04"
+    },
+    {
+      "building": "shops",
+      "building_index": 46,
+      "id": "B046_shops_05",
+      "interaction_exists": false,
+      "landing_world": [
+        55.125,
+        0.08,
+        42.702
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        42.404,
+        1.186,
+        33.501
+      ],
+      "position_world": [
+        55.125,
+        1.542,
+        43.552
+      ],
+      "status": "accessible",
+      "template": "shops_05"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 47,
+      "id": "B047_square_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        47.58,
+        0.08,
+        70.2
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        37.254,
+        1.674,
+        54.0
+      ],
+      "position_world": [
+        48.43,
+        2.176,
+        70.2
+      ],
+      "status": "accessible",
+      "template": "square_tower_01"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 47,
+      "id": "B047_square_tower_02",
+      "interaction_exists": false,
+      "landing_world": [
+        53.949,
+        0.08,
+        76.57
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        41.499,
+        1.674,
+        58.246
+      ],
+      "position_world": [
+        53.949,
+        2.176,
+        75.72
+      ],
+      "status": "accessible",
+      "template": "square_tower_02"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 47,
+      "id": "B047_square_tower_03",
+      "interaction_exists": false,
+      "landing_world": [
+        60.32,
+        0.08,
+        70.2
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        45.746,
+        1.674,
+        54.0
+      ],
+      "position_world": [
+        59.47,
+        2.176,
+        70.2
+      ],
+      "status": "accessible",
+      "template": "square_tower_03"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 47,
+      "id": "B047_square_tower_04",
+      "interaction_exists": false,
+      "landing_world": [
+        53.949,
+        0.08,
+        63.83
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        41.499,
+        1.674,
+        49.754
+      ],
+      "position_world": [
+        53.949,
+        2.176,
+        64.68
+      ],
+      "status": "accessible",
+      "template": "square_tower_04"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 50,
+      "id": "B050_square_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        67.649,
+        0.08,
+        -78.0
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        52.692,
+        2.229,
+        -60.0
+      ],
+      "position_world": [
+        68.499,
+        2.897,
+        -78.0
+      ],
+      "status": "accessible",
+      "template": "square_tower_01"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 51,
+      "id": "B051_square_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        67.649,
+        0.08,
+        -62.4
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        52.692,
+        2.475,
+        -48.0
+      ],
+      "position_world": [
+        68.499,
+        3.218,
+        -62.4
+      ],
+      "status": "accessible",
+      "template": "square_tower_01"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 52,
+      "id": "B052_square_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        67.649,
+        0.08,
+        -46.8
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        52.692,
+        1.736,
+        -36.0
+      ],
+      "position_world": [
+        68.499,
+        2.256,
+        -46.8
+      ],
+      "status": "accessible",
+      "template": "square_tower_01"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 53,
+      "id": "B053_square_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        67.649,
+        0.08,
+        -31.2
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        52.692,
+        1.982,
+        -24.0
+      ],
+      "position_world": [
+        68.499,
+        2.577,
+        -31.2
+      ],
+      "status": "accessible",
+      "template": "square_tower_01"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 54,
+      "id": "B054_square_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        67.649,
+        0.08,
+        -15.6
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        52.692,
+        2.229,
+        -12.0
+      ],
+      "position_world": [
+        68.499,
+        2.897,
+        -15.6
+      ],
+      "status": "accessible",
+      "template": "square_tower_01"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 55,
+      "id": "B055_square_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        67.649,
+        0.08,
+        0.0
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        52.692,
+        2.475,
+        0.0
+      ],
+      "position_world": [
+        68.499,
+        3.218,
+        0.0
+      ],
+      "status": "accessible",
+      "template": "square_tower_01"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 56,
+      "id": "B056_square_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        67.649,
+        0.08,
+        15.6
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        52.692,
+        1.736,
+        12.0
+      ],
+      "position_world": [
+        68.499,
+        2.256,
+        15.6
+      ],
+      "status": "accessible",
+      "template": "square_tower_01"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 57,
+      "id": "B057_square_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        67.649,
+        0.08,
+        31.2
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        52.692,
+        1.982,
+        24.0
+      ],
+      "position_world": [
+        68.499,
+        2.577,
+        31.2
+      ],
+      "status": "accessible",
+      "template": "square_tower_01"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 58,
+      "id": "B058_square_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        67.649,
+        0.08,
+        46.8
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        52.692,
+        2.229,
+        36.0
+      ],
+      "position_world": [
+        68.499,
+        2.897,
+        46.8
+      ],
+      "status": "accessible",
+      "template": "square_tower_01"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 59,
+      "id": "B059_square_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        67.649,
+        0.08,
+        62.4
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        52.692,
+        2.475,
+        48.0
+      ],
+      "position_world": [
+        68.499,
+        3.218,
+        62.4
+      ],
+      "status": "accessible",
+      "template": "square_tower_01"
+    },
+    {
+      "building": "square_tower",
+      "building_index": 60,
+      "id": "B060_square_tower_01",
+      "interaction_exists": false,
+      "landing_world": [
+        67.649,
+        0.08,
+        78.0
+      ],
+      "model": "square_tower",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        52.692,
+        1.736,
+        60.0
+      ],
+      "position_world": [
+        68.499,
+        2.256,
+        78.0
+      ],
+      "status": "accessible",
+      "template": "square_tower_01"
+    },
+    {
+      "building": "apartment",
+      "building_index": 72,
+      "id": "B072_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -56.095,
+        0.08,
+        -86.36
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -42.496,
+        1.353,
+        -66.431
+      ],
+      "position_world": [
+        -55.245,
+        1.759,
+        -86.36
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 72,
+      "id": "B072_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -47.256,
+        0.08,
+        -83.595
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -37.004,
+        1.353,
+        -64.304
+      ],
+      "position_world": [
+        -48.106,
+        1.759,
+        -83.595
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 72,
+      "id": "B072_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        -51.669,
+        0.08,
+        -78.553
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -39.745,
+        1.353,
+        -62.579
+      ],
+      "position_world": [
+        -51.669,
+        1.759,
+        -81.353
+      ],
+      "status": "landing_clear_route_unconfirmed",
+      "template": "apartment_05"
+    },
+    {
+      "building": "apartment",
+      "building_index": 73,
+      "id": "B073_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -36.595,
+        0.08,
+        -86.36
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -27.496,
+        1.353,
+        -66.431
+      ],
+      "position_world": [
+        -35.745,
+        1.759,
+        -86.36
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 73,
+      "id": "B073_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -27.756,
+        0.08,
+        -83.595
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -22.004,
+        1.353,
+        -64.304
+      ],
+      "position_world": [
+        -28.606,
+        1.759,
+        -83.595
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 73,
+      "id": "B073_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        -32.169,
+        0.08,
+        -80.503
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -24.745,
+        1.353,
+        -62.579
+      ],
+      "position_world": [
+        -32.169,
+        1.759,
+        -81.353
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "apartment",
+      "building_index": 74,
+      "id": "B074_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -17.095,
+        0.08,
+        -86.36
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -12.496,
+        1.353,
+        -66.431
+      ],
+      "position_world": [
+        -16.245,
+        1.759,
+        -86.36
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 74,
+      "id": "B074_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -8.256,
+        0.08,
+        -83.595
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -7.004,
+        1.353,
+        -64.304
+      ],
+      "position_world": [
+        -9.106,
+        1.759,
+        -83.595
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 74,
+      "id": "B074_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        -12.669,
+        0.08,
+        -80.503
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -9.745,
+        1.353,
+        -62.579
+      ],
+      "position_world": [
+        -12.669,
+        1.759,
+        -81.353
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "shops",
+      "building_index": 75,
+      "id": "B075_shops_02",
+      "interaction_exists": false,
+      "landing_world": [
+        10.377,
+        1.617,
+        -88.434
+      ],
+      "model": "shops",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        7.328,
+        1.244,
+        -68.026
+      ],
+      "position_world": [
+        9.527,
+        1.617,
+        -88.434
+      ],
+      "status": "blocked_approach",
+      "template": "shops_02"
+    },
+    {
+      "building": "shops",
+      "building_index": 75,
+      "id": "B075_shops_03",
+      "interaction_exists": false,
+      "landing_world": [
+        -7.53,
+        0.08,
+        -84.209
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        -5.792,
+        1.244,
+        -65.43
+      ],
+      "position_world": [
+        -7.53,
+        1.617,
+        -85.059
+      ],
+      "status": "accessible",
+      "template": "shops_03"
+    },
+    {
+      "building": "shops",
+      "building_index": 75,
+      "id": "B075_shops_04",
+      "interaction_exists": false,
+      "landing_world": [
+        5.022,
+        0.08,
+        -84.209
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        3.863,
+        1.244,
+        -65.43
+      ],
+      "position_world": [
+        5.022,
+        1.617,
+        -85.059
+      ],
+      "status": "accessible",
+      "template": "shops_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 76,
+      "id": "B076_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        21.905,
+        0.08,
+        -86.36
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        17.504,
+        1.353,
+        -66.431
+      ],
+      "position_world": [
+        22.755,
+        1.759,
+        -86.36
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 76,
+      "id": "B076_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        30.744,
+        0.08,
+        -83.595
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        22.996,
+        1.353,
+        -64.304
+      ],
+      "position_world": [
+        29.894,
+        1.759,
+        -83.595
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 76,
+      "id": "B076_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        26.331,
+        0.08,
+        -80.503
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        20.255,
+        1.353,
+        -62.579
+      ],
+      "position_world": [
+        26.331,
+        1.759,
+        -81.353
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "apartment",
+      "building_index": 77,
+      "id": "B077_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        41.405,
+        0.08,
+        -86.36
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        32.504,
+        1.353,
+        -66.431
+      ],
+      "position_world": [
+        42.255,
+        1.759,
+        -86.36
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 77,
+      "id": "B077_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        50.244,
+        0.08,
+        -83.595
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        37.996,
+        1.353,
+        -64.304
+      ],
+      "position_world": [
+        49.394,
+        1.759,
+        -83.595
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 77,
+      "id": "B077_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        45.831,
+        0.08,
+        -80.503
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        35.255,
+        1.353,
+        -62.579
+      ],
+      "position_world": [
+        45.831,
+        1.759,
+        -81.353
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "apartment",
+      "building_index": 78,
+      "id": "B078_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        60.905,
+        0.08,
+        -86.36
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        47.504,
+        1.353,
+        -66.431
+      ],
+      "position_world": [
+        61.755,
+        1.759,
+        -86.36
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 78,
+      "id": "B078_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        69.744,
+        1.759,
+        -83.595
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        52.996,
+        1.353,
+        -64.304
+      ],
+      "position_world": [
+        68.894,
+        1.759,
+        -83.595
+      ],
+      "status": "blocked_approach",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 78,
+      "id": "B078_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        65.331,
+        0.08,
+        -80.503
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "position_town": [
+        50.255,
+        1.353,
+        -62.579
+      ],
+      "position_world": [
+        65.331,
+        1.759,
+        -81.353
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "apartment",
+      "building_index": 87,
+      "id": "B087_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -60.905,
+        0.08,
+        86.36
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -47.504,
+        1.353,
+        66.431
+      ],
+      "position_world": [
+        -61.755,
+        1.759,
+        86.36
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 87,
+      "id": "B087_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -69.744,
+        1.759,
+        83.595
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -52.996,
+        1.353,
+        64.304
+      ],
+      "position_world": [
+        -68.894,
+        1.759,
+        83.595
+      ],
+      "status": "blocked_approach",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 87,
+      "id": "B087_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        -65.331,
+        0.08,
+        80.503
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -50.255,
+        1.353,
+        62.579
+      ],
+      "position_world": [
+        -65.331,
+        1.759,
+        81.353
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "apartment",
+      "building_index": 88,
+      "id": "B088_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -41.405,
+        0.08,
+        86.36
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -32.504,
+        1.353,
+        66.431
+      ],
+      "position_world": [
+        -42.255,
+        1.759,
+        86.36
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 88,
+      "id": "B088_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -50.244,
+        0.08,
+        83.595
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -37.996,
+        1.353,
+        64.304
+      ],
+      "position_world": [
+        -49.394,
+        1.759,
+        83.595
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 88,
+      "id": "B088_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        -45.831,
+        0.08,
+        80.503
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -35.255,
+        1.353,
+        62.579
+      ],
+      "position_world": [
+        -45.831,
+        1.759,
+        81.353
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "apartment",
+      "building_index": 89,
+      "id": "B089_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -21.905,
+        0.08,
+        86.36
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -17.504,
+        1.353,
+        66.431
+      ],
+      "position_world": [
+        -22.755,
+        1.759,
+        86.36
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 89,
+      "id": "B089_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -30.744,
+        0.08,
+        83.595
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -22.996,
+        1.353,
+        64.304
+      ],
+      "position_world": [
+        -29.894,
+        1.759,
+        83.595
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 89,
+      "id": "B089_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        -26.331,
+        0.08,
+        80.503
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -20.255,
+        1.353,
+        62.579
+      ],
+      "position_world": [
+        -26.331,
+        1.759,
+        81.353
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "shops",
+      "building_index": 90,
+      "id": "B090_shops_02",
+      "interaction_exists": false,
+      "landing_world": [
+        -10.377,
+        1.617,
+        88.434
+      ],
+      "model": "shops",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        -7.328,
+        1.244,
+        68.026
+      ],
+      "position_world": [
+        -9.527,
+        1.617,
+        88.434
+      ],
+      "status": "blocked_approach",
+      "template": "shops_02"
+    },
+    {
+      "building": "shops",
+      "building_index": 90,
+      "id": "B090_shops_03",
+      "interaction_exists": false,
+      "landing_world": [
+        7.53,
+        0.08,
+        84.209
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        5.792,
+        1.244,
+        65.43
+      ],
+      "position_world": [
+        7.53,
+        1.617,
+        85.059
+      ],
+      "status": "accessible",
+      "template": "shops_03"
+    },
+    {
+      "building": "shops",
+      "building_index": 90,
+      "id": "B090_shops_04",
+      "interaction_exists": false,
+      "landing_world": [
+        -5.022,
+        0.08,
+        84.209
+      ],
+      "model": "shops",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        -3.863,
+        1.244,
+        65.43
+      ],
+      "position_world": [
+        -5.022,
+        1.617,
+        85.059
+      ],
+      "status": "accessible",
+      "template": "shops_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 91,
+      "id": "B091_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        17.095,
+        0.08,
+        86.36
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        12.496,
+        1.353,
+        66.431
+      ],
+      "position_world": [
+        16.245,
+        1.759,
+        86.36
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 91,
+      "id": "B091_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        8.256,
+        0.08,
+        83.595
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        7.004,
+        1.353,
+        64.304
+      ],
+      "position_world": [
+        9.106,
+        1.759,
+        83.595
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 91,
+      "id": "B091_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        12.669,
+        0.08,
+        80.503
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        9.745,
+        1.353,
+        62.579
+      ],
+      "position_world": [
+        12.669,
+        1.759,
+        81.353
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "apartment",
+      "building_index": 92,
+      "id": "B092_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        36.595,
+        0.08,
+        86.36
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        27.496,
+        1.353,
+        66.431
+      ],
+      "position_world": [
+        35.745,
+        1.759,
+        86.36
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 92,
+      "id": "B092_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        27.756,
+        0.08,
+        83.595
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        22.004,
+        1.353,
+        64.304
+      ],
+      "position_world": [
+        28.606,
+        1.759,
+        83.595
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 92,
+      "id": "B092_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        32.169,
+        0.08,
+        80.503
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        24.745,
+        1.353,
+        62.579
+      ],
+      "position_world": [
+        32.169,
+        1.759,
+        81.353
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    },
+    {
+      "building": "apartment",
+      "building_index": 93,
+      "id": "B093_apartment_02",
+      "interaction_exists": false,
+      "landing_world": [
+        56.095,
+        0.08,
+        86.36
+      ],
+      "model": "apartment",
+      "outward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        42.496,
+        1.353,
+        66.431
+      ],
+      "position_world": [
+        55.245,
+        1.759,
+        86.36
+      ],
+      "status": "accessible",
+      "template": "apartment_02"
+    },
+    {
+      "building": "apartment",
+      "building_index": 93,
+      "id": "B093_apartment_04",
+      "interaction_exists": false,
+      "landing_world": [
+        47.256,
+        0.08,
+        83.595
+      ],
+      "model": "apartment",
+      "outward_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "position_town": [
+        37.004,
+        1.353,
+        64.304
+      ],
+      "position_world": [
+        48.106,
+        1.759,
+        83.595
+      ],
+      "status": "accessible",
+      "template": "apartment_04"
+    },
+    {
+      "building": "apartment",
+      "building_index": 93,
+      "id": "B093_apartment_05",
+      "interaction_exists": false,
+      "landing_world": [
+        51.669,
+        0.08,
+        80.503
+      ],
+      "model": "apartment",
+      "outward_world": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "position_town": [
+        39.745,
+        1.353,
+        62.579
+      ],
+      "position_world": [
+        51.669,
+        1.759,
+        81.353
+      ],
+      "status": "accessible",
+      "template": "apartment_05"
+    }
+  ],
+  "doors_total": 151,
+  "excluded_beyond_boundary": 242,
+  "method": "Six authored building types visually reviewed on all four sides; door-panel components extracted from source geometry. Approaches checked with player-sized capsule and a connected full-district grid. Unconfirmed/blocked approaches retained for review, never silently discarded.",
+  "reachable_grid_cells": 11435,
+  "scope": "Ground-floor pedestrian door panels physically within the closed playable district. Windows, garage shutters, roof/balcony access and doors beyond the boundary excluded."
+}
