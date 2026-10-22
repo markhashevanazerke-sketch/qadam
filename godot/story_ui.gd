@@ -36,6 +36,8 @@ var portrait:SubViewport
 var request:HTTPRequest
 var request_serial:=0
 var waiting:=false
+var pending_text:=""
+var request_started:=0
 var refresh:=0.0
 var aim_clock:=0.0
 var phone_scroll:ScrollContainer
@@ -120,6 +122,8 @@ func _process(delta:float) -> void:
 	refresh-=delta
 	if refresh>0:return
 	refresh=.3;_register_actors()
+	if waiting and modal=="chat":
+		status.text=str(profiles[active_id].name)+" жауап жазып жатыр… %d с"%int((Time.get_ticks_msec()-request_started)/1000)
 	clock_label.text="%d-КҮН  ·  %s  ·  %d ₸"%[game.story.day(),game.story.clock_text(),game.story.money]
 	task.text="ЖАҢА БАСТАУ\n"+game.story.objective() if game.story.deliveries==0 else game.story.objective()
 	phone_clock.text=game.story.clock_text()+"                        ▴  94%"
@@ -295,6 +299,7 @@ func _draw_messages() -> void:
 	messages.clear();_message(str(profiles[active_id].name),str(profiles[active_id].greeting))
 	for message in game.story.histories.get(active_id,[]):
 		_message("Натан" if message.role=="user" else str(profiles[active_id].name),str(message.content),message.role=="user")
+	if waiting and not pending_text.is_empty():_message("Натан · жіберілуде",pending_text,true)
 func _update_job_button() -> void:
 	var shop:int=profiles[active_id].shop
 	job_button.visible=shop>=0
@@ -335,6 +340,7 @@ func api_key() -> String:
 	if not value.is_empty():return value
 	var config:=ConfigFile.new()
 	if config.load("user://llm.cfg")==OK:return str(config.get_value("alem","api_key","")).strip_edges()
+	if config.load(preload("res://runtime_paths.gd").root_dir().path_join("config/llm.cfg"))==OK:return str(config.get_value("alem","api_key","")).strip_edges()
 	return ""
 func _quick_message(words:String) -> void:
 	if waiting:return
@@ -352,18 +358,19 @@ func send_message() -> void:
 		if message is Dictionary and message.get("role","") in ["user","assistant"]:packet.append({"role":message.role,"content":str(message.get("content","")).left(2000)})
 	packet.append({"role":"user","content":words})
 	request_serial+=1;var serial:=request_serial
-	request=HTTPRequest.new();request.timeout=30;request.body_size_limit=131072;add_child(request)
+	request=HTTPRequest.new();request.timeout=60;request.body_size_limit=131072;add_child(request)
 	request.request_completed.connect(_reply.bind(serial,active_id,words))
-	waiting=true;send_button.disabled=true;draft.editable=false;job_button.disabled=true
+	waiting=true;pending_text=words;request_started=Time.get_ticks_msec();draft.editable=false;job_button.disabled=true
+	_refresh_voice_controls();_draw_messages()
 	status.text=str(profiles[active_id].name)+" жауап жазып жатыр…"
 	var error:=request.request(API_URL,["Authorization: Bearer "+key,"Content-Type: application/json"],HTTPClient.METHOD_POST,JSON.stringify({"model":"gemma4","messages":packet,"max_tokens":400}))
 	if error!=OK:_request_failed("Байланыс орнатылмады. Қайталау үшін «Жіберу» батырмасын бас.")
 func _reply(result:int,code:int,_headers:PackedStringArray,body:PackedByteArray,serial:int,id:String,words:String) -> void:
 	if serial!=request_serial or id!=active_id:return
 	if result!=HTTPRequest.RESULT_SUCCESS:
-		_request_failed("Байланыс үзілді. Хабарлама сақталды, қайта жіберіп көр.");return
+		_request_failed(connection_error(result));return
 	if code!=200:
-		_request_failed("Қызмет бос емес. Сәл кейін қайталап көр." if code==429 or code>=500 else "Сұрау қабылданбады (%d). Қайта жіберіп көр."%code);return
+		_request_failed("Қызмет бос емес. Сәл кейін қайталап көр." if code==429 or code>=500 else ("Alem кілті қабылданбады. API кілтін тексеру қажет." if code in [401,403] else "Сұрау қабылданбады (%d). Мәтін сақталды."%code));return
 	var data=JSON.parse_string(body.get_string_from_utf8())
 	var reply:=""
 	if data is Dictionary and data.get("choices") is Array and not data.choices.is_empty():
@@ -381,11 +388,11 @@ func _reply(result:int,code:int,_headers:PackedStringArray,body:PackedByteArray,
 	_draw_messages();draft.grab_focus()
 	if not game.automated:game.speech.speak(reply,id)
 func _finish_request() -> void:
-	waiting=false;send_button.disabled=false;draft.editable=true
+	waiting=false;pending_text="";draft.editable=true;_refresh_voice_controls()
 	if is_instance_valid(request):request.queue_free();request=null
 	if not active_id.is_empty():_update_job_button()
 func _request_failed(message:String) -> void:
-	_finish_request();status.text=message;draft.grab_focus()
+	_finish_request();_draw_messages();status.text=message;draft.grab_focus()
 func _cancel_request() -> void:
 	request_serial+=1
 	if is_instance_valid(request):request.cancel_request()
@@ -408,17 +415,27 @@ func resident_profile(id:String,door:int,slot:int) -> Dictionary:
 	profile.system+="Мінезің: "+["сабырлы, қысқа сөйлейсің","ақжарқын, сұрақ қойғанды ұнатасың","ұқыпты, жаңа көршіге көмектесесің"][posmod(door+slot,3)]+"."
 	profiles[id]=profile;return profile
 
+func connection_error(result:int) -> String:
+	match result:
+		HTTPRequest.RESULT_CANT_RESOLVE:return "Alem мекенжайы табылмады. Интернетті тексер. Мәтінің сақталды."
+		HTTPRequest.RESULT_CANT_CONNECT,HTTPRequest.RESULT_CONNECTION_ERROR:return "Alem-ге қосылу мүмкін болмады. Интернетті тексеріп, қайта жібер."
+		HTTPRequest.RESULT_TLS_HANDSHAKE_ERROR:return "Қауіпсіз байланыс орнатылмады. Жүйе уақытын және интернетті тексер."
+		HTTPRequest.RESULT_TIMEOUT:return "Жауап күту уақыты аяқталды. Мәтінің сақталды — қайта жіберуге болады."
+	return "Байланыс үзілді. Мәтінің сақталды — қайта жіберуге болады."
+
+func _refresh_voice_controls() -> void:
+	mic_button.text="Тоқтату" if game.speech.recording else "Микрофон"
+	mic_button.disabled=game.speech.working or waiting
+	listen_button.disabled=game.speech.working or game.speech.recording or waiting
+	practice_button.disabled=game.speech.working or game.speech.recording or waiting
+	# Writing is independent of speech synthesis. Sending cancels obsolete audio.
+	send_button.disabled=waiting or game.speech.recording
+
 func connect_speech() -> void:
 	voice_toggle.button_pressed=game.speech.enabled
 	voice_toggle.toggled.connect(game.speech.set_enabled)
 	game.speech.feedback.connect(func(words:String):voice_status.text=words)
-	game.speech.changed.connect(func():
-		mic_button.text="Тоқтату" if game.speech.recording else "Микрофон"
-		mic_button.disabled=game.speech.working or waiting
-		listen_button.disabled=game.speech.working or game.speech.recording
-		practice_button.disabled=game.speech.working or game.speech.recording
-		send_button.disabled=waiting or game.speech.recording or game.speech.working
-	)
+	game.speech.changed.connect(_refresh_voice_controls)
 	game.speech.transcript.connect(func(words:String,details:Dictionary):
 		if modal!="chat":return
 		draft.text=words.left(500);draft.grab_focus();draft.caret_column=draft.text.length()

@@ -70,6 +70,12 @@ func run() -> void:
 	ui.draft.text="Қайта сұрау";ui.waiting=true
 	ui._reply(HTTPRequest.RESULT_SUCCESS,503,PackedStringArray(),"{}".to_utf8_buffer(),ui.request_serial,"citizen_00",ui.draft.text)
 	check(not ui.waiting and ui.draft.editable and ui.draft.text=="Қайта сұрау" and state.histories.citizen_00.size()==history_size,"network error keeps draft and no duplicate history")
+	game.speech.working=true;game.speech.changed.emit()
+	check(not ui.send_button.disabled,"TTS never blocks text send")
+	game.speech.recording=true;game.speech.changed.emit()
+	check(ui.send_button.disabled,"recording blocks incomplete transcript send")
+	game.speech.recording=false;game.speech.working=false;game.speech.changed.emit()
+	check(ui.connection_error(HTTPRequest.RESULT_TIMEOUT)!=ui.connection_error(HTTPRequest.RESULT_CANT_RESOLVE),"network failure reasons are distinct")
 	var serial:int=ui.request_serial;ui.close_modal()
 	ui._reply(HTTPRequest.RESULT_SUCCESS,200,PackedStringArray(),"{}".to_utf8_buffer(),serial,"citizen_00","late")
 	check(not citizen.get_meta("in_dialogue"),"closing chat releases citizen and ignores stale reply")

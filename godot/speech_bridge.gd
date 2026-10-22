@@ -51,9 +51,9 @@ func ensure_service() -> void:
 			if not pending_words.is_empty():var words:=pending_words;pending_words="";speak(words,pending_actor)
 			return
 		if result!=HTTPRequest.RESULT_SUCCESS and (process_id<0 or not OS.is_process_running(process_id)):
-			var python:=ProjectSettings.globalize_path("res://../.voice-venv/bin/python")
+			var python:=preload("res://runtime_paths.gd").python()
 			if not FileAccess.file_exists(python):feedback.emit("Дауыс моделі орнатылмаған. Мәтінмен сөйлесуге болады.");return
-			process_id=OS.create_process(python,[ProjectSettings.globalize_path("res://../voice/server.py")])
+			process_id=OS.create_process(python,[preload("res://runtime_paths.gd").root_dir().path_join("voice/server.py")])
 		if game.story_ui.is_modal():get_tree().create_timer(2).timeout.connect(ensure_service)
 	)
 	health.request(URL+"/health")
@@ -81,6 +81,9 @@ func audio_key(words:String,sid:int) -> String:
 func cached_audio(key:String) -> AudioStreamWAV:
 	for folder in [BUILT_LINES,cache_dir]:
 		var path:String=folder+"/"+key+".wav"
+		if folder==BUILT_LINES and ResourceLoader.exists(path):
+			var imported=load(path)
+			if imported is AudioStreamWAV and not imported.data.is_empty():return imported
 		if not FileAccess.file_exists(path):continue
 		var audio:=AudioStreamWAV.load_from_file(ProjectSettings.globalize_path(path))
 		if audio!=null and not audio.data.is_empty():return audio
