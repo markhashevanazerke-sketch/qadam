@@ -52,7 +52,7 @@ def recognize(data):
     if len(samples)%channels: raise ValueError('audio_format')
     samples = samples.reshape(-1,channels).astype(np.float32).mean(axis=1)
     if not .3 <= len(samples)/rate <= 31: raise ValueError('audio_length')
-    if np.sqrt(np.mean(samples**2)) < 65: raise ValueError('silence')
+    if np.sqrt(np.mean(samples**2)) < 30: raise ValueError('silence')
     if rate!=16000:
         samples=np.interp(np.arange(int(len(samples)*16000/rate))*rate/16000, np.arange(len(samples)),samples)
     rec = vosk.KaldiRecognizer(ASR,16000);rec.SetWords(True)
@@ -101,7 +101,7 @@ class Handler(BaseHTTPRequestHandler):
             if not 0<size<=9000000:raise ValueError('size')
             data=json.loads(self.rfile.read(size))
             self.send_json(200,recognize(data) if self.path=='/stt' else synthesize(data))
-        except (ValueError,TypeError,KeyError):self.send_json(400,{'error':'invalid_or_silent_audio'})
+        except (ValueError,TypeError,KeyError) as exc:self.send_json(400,{'error':str(exc) or 'invalid_or_silent_audio'})
         except Exception as exc:
             print(type(exc).__name__,flush=True);self.send_json(500,{'error':'voice_failed'})
         finally: LOCK.release()

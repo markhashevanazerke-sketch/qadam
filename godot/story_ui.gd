@@ -500,9 +500,11 @@ func send_message() -> void:
 		if message is Dictionary and message.get("role","") in ["user","assistant"]:packet.append({"role":message.role,"content":str(message.get("content","")).left(2000)})
 	packet.append({"role":"user","content":words})
 	request_serial+=1;var serial:=request_serial
-	request=HTTPRequest.new();request.timeout=25;request.body_size_limit=131072;add_child(request)
+	request=HTTPRequest.new();request.timeout=8;request.body_size_limit=131072;add_child(request)
 	request.request_completed.connect(_reply.bind(serial,active_id,words))
-	waiting=true;pending_text=words;request_started=Time.get_ticks_msec();draft.editable=false;job_button.disabled=true
+	# The text field stays editable while the reply is in flight: the player
+	# can always keep writing even if the LLM is slow or down.
+	waiting=true;pending_text=words;request_started=Time.get_ticks_msec();job_button.disabled=true
 	_refresh_voice_controls();_draw_messages()
 	status.text=str(profiles[active_id].name)+" жауап жазып жатыр…"
 	var error:=request.request(API_URL,["Authorization: Bearer "+key,"Content-Type: application/json"],HTTPClient.METHOD_POST,JSON.stringify({"model":"gemma4","messages":packet,"max_tokens":400,"stream":false}))
@@ -524,6 +526,7 @@ func _reply(result:int,code:int,_headers:PackedStringArray,body:PackedByteArray,
 	_after_reply(id,reply,"")
 func _finish_request() -> void:
 	waiting=false;pending_text="";draft.editable=true;_refresh_voice_controls()
+	draft.grab_focus()
 	if is_instance_valid(request):request.queue_free();request=null
 	if not active_id.is_empty():_update_job_button()
 # The LLM is liveliness on top, not a requirement: with no key, or right
@@ -689,7 +692,7 @@ func connection_error(result:int) -> String:
 	match result:
 		HTTPRequest.RESULT_CANT_RESOLVE:return "Alem мекенжайы табылмады. Интернетті тексер. Мәтінің сақталды."
 		HTTPRequest.RESULT_CANT_CONNECT,HTTPRequest.RESULT_CONNECTION_ERROR:return "Alem-ге қосылу мүмкін болмады. Интернетті тексеріп, қайта жібер."
-		HTTPRequest.RESULT_TLS_HANDSHAKE_ERROR:return "Қауіпсіз байланыс орнатылмады. Жүйе уақытын және интернетті тексер."
+		HTTPRequest.RESULT_TLS_HANDSHAKE_ERROR:return "Қызметке қауіпсіз қосылу мүмкін болмады (сервер сертификаты/интернет). Жауап дайын сөздермен берілді."
 		HTTPRequest.RESULT_TIMEOUT:return "Жауап күту уақыты аяқталды. Мәтінің сақталды — қайта жіберуге болады."
 	return "Байланыс үзілді. Мәтінің сақталды — қайта жіберуге болады."
 
@@ -704,7 +707,11 @@ func _refresh_voice_controls() -> void:
 func connect_speech() -> void:
 	voice_toggle.button_pressed=game.speech.enabled
 	voice_toggle.toggled.connect(game.speech.set_enabled)
-	game.speech.feedback.connect(func(words:String):voice_status.text=words)
+	game.speech.feedback.connect(func(words:String):
+		voice_status.text=words
+		# After any voice event focus returns to the text field, so typing
+		# works right away without an extra click on the input.
+		if modal=="chat" and draft.editable and not waiting:draft.grab_focus())
 	game.speech.changed.connect(_refresh_voice_controls)
 	game.speech.transcript.connect(func(words:String,details:Dictionary):
 		if modal!="chat":return

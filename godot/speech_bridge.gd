@@ -29,6 +29,7 @@ var last_words:=""
 var last_actor:=""
 var pending_words:=""
 var pending_actor:=""
+var pending_record:=false
 var last_voice_check:=0.0
 var voice_peak_rms:=0.0
 var voice_quiet_since:=0.0
@@ -56,6 +57,7 @@ func ensure_service() -> void:
 		if service_ready:
 			startup_attempts=0
 			if not pending_words.is_empty():var words:=pending_words;pending_words="";speak(words,pending_actor)
+			if pending_record:pending_record=false;_start_recording()
 			return
 		if result!=HTTPRequest.RESULT_SUCCESS and (process_id<0 or not OS.is_process_running(process_id)):
 			var python:=preload("res://runtime_paths.gd").python()
@@ -68,7 +70,7 @@ func ensure_service() -> void:
 	health.request(URL+"/health")
 
 func stop() -> void:
-	serial+=1;working=false;pending_words="";speaker.stop()
+	serial+=1;working=false;pending_words="";pending_record=false;speaker.stop()
 	if recording:recorder.set_recording_active(false);mic.stop();recording=false
 	if is_instance_valid(request):request.cancel_request();request.queue_free();request=null
 	changed.emit()
@@ -121,7 +123,17 @@ func speak(words:String,actor:String) -> void:
 func toggle_recording() -> void:
 	if recording:finish_recording();return
 	if game.story_ui.waiting:return
-	if not service_ready:ensure_service();feedback.emit("Дауыс моделі іске қосылып жатыр. Сәл күте тұр.");return
+	if not service_ready:
+		# The model is still loading (first launch can take a minute). Queue the
+		# recording: it starts automatically as soon as the service is ready, so
+		# the player never has to click the mic twice.
+		pending_record=true
+		ensure_service()
+		feedback.emit("Дауыс моделі жүктелуде — дайын болар болса, тыңдау өзі басталады.")
+		return
+	_start_recording()
+
+func _start_recording() -> void:
 	stop()
 	if bus<0:
 		AudioServer.add_bus();bus=AudioServer.bus_count-1;AudioServer.set_bus_name(bus,"NazerkeMicrophone")
@@ -142,12 +154,24 @@ func finish_recording() -> void:
 
 func post(kind:String,data:Dictionary,retry:int=0) -> void:
 	working=true;serial+=1;var token:=serial
-	request=HTTPRequest.new();request.timeout=60;request.body_size_limit=16000000;add_child(request)
+	request=HTTPRequest.new();request.timeout=90;request.body_size_limit=16000000;add_child(request)
 	request.request_completed.connect(func(result:int,code:int,_headers:PackedStringArray,body:PackedByteArray):
 		if token!=serial:return
 		request.queue_free();request=null
-		if code==503 and retry<20:
+		# The service is up but the model is still loading (a cold start of the
+		# 1.3 GB Kazakh model can take a minute): wait, it is not an error.
+		if code==503 and retry<180:
+			if retry==0:feedback.emit("Дауыс моделі жүктеліп жатыр — сәл күте тұр, мен өзім жалғастырайын…")
 			get_tree().create_timer(.5).timeout.connect(func():
+				if token==serial:post(kind,data,retry+1)
+			)
+			return
+		# Connection is dead (e.g. the service idled out after 10 quiet
+		# minutes): relaunch it and retry transparently.
+		if result!=HTTPRequest.RESULT_SUCCESS and kind=="stt" and retry<6:
+			service_ready=false;startup_attempts=0;ensure_service()
+			if retry==0:feedback.emit("Дауыс қызметін қайта іске қосып жатыр…")
+			get_tree().create_timer(2.0).timeout.connect(func():
 				if token==serial:post(kind,data,retry+1)
 			)
 			return
@@ -159,7 +183,16 @@ func post(kind:String,data:Dictionary,retry:int=0) -> void:
 		if kind=="stt" and game.story_ui.modal!="chat":return
 		if result!=HTTPRequest.RESULT_SUCCESS or code!=200:
 			if result!=HTTPRequest.RESULT_SUCCESS:service_ready=false;startup_attempts=0
-			feedback.emit("Дауыс анық естілмеді немесе қызмет бос емес. Қайталап көр, не мәтін жаз." if kind=="stt" else "Дауыс қолжетімсіз. Жауапты мәтіннен оқуға болады.")
+			var message:="Дауыс қолжетімсіз. Жауапты мәтіннен оқуға болады."
+			if kind=="stt":
+				var detail:=""
+				if code==400:
+					var err_body=JSON.parse_string(body.get_string_from_utf8())
+					if err_body is Dictionary:detail=str(err_body.get("error",""))
+					if detail=="silence":message="Микрофоннан дауыс естілмеді. Дауыстап немесе жақынырақ қайтала, не мәтін жаз."
+					elif detail=="not_recognized":message="Сөздер таналмады. Басқаша айтып көр, не мәтін жаз."
+					else:message="Дауыс анық естілмеді немесе қызмет бос емес. Қайталап көр, не мәтін жаз."
+			feedback.emit(message)
 			return
 		var value=JSON.parse_string(body.get_string_from_utf8())
 		if not value is Dictionary:return
@@ -179,7 +212,7 @@ func _process(_delta:float) -> void:
 	if not recording:return
 	var now:=Time.get_ticks_msec()/1000.0
 	if now-started_at>=30:finish_recording();return
-	if not game.captured:stop();return
+	if game.story_ui.modal!="chat":stop();return
 	# Auto-stop right after the speaker pauses — no waiting for a button.
 	if now-last_voice_check>=0.25:
 		last_voice_check=now
@@ -202,7 +235,7 @@ func _process(_delta:float) -> void:
 				if rms>=quiet_threshold:voice_quiet_since=0.0
 				elif voice_quiet_since<=0.0:voice_quiet_since=now
 	# Auto-stop right after the speaker pauses — no waiting for a button.
-	if voice_peak_rms>=40.0 and voice_quiet_since>0.0 and now-voice_quiet_since>1.15:finish_recording()
+	if voice_peak_rms>=25.0 and voice_quiet_since>0.0 and now-voice_quiet_since>1.15:finish_recording()
 
 func _exit_tree() -> void:
 	if is_instance_valid(mic):mic.stop()
