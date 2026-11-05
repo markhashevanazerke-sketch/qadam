@@ -5,8 +5,8 @@
 ## Запуск
 
 ```sh
-git clone https://github.com/yrn-dev/qadam.git
-cd qadam
+git clone https://github.com/Bekzat099/Qadam.git
+cd Qadam
 ./run
 ```
 
