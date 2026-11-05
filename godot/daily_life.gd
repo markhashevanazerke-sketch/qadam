@@ -290,8 +290,10 @@ func update_daylight() -> void:
 	game.outdoor_sun.rotation_degrees.x=-lerpf(40,12,clampf((hour-9)/9,0,1))
 	game.outdoor_sun.light_color=Color("ffd1a2").lerp(Color("fff3df"),daylight)
 	if not game.home_visits.inside() and not game.shop_visits.inside():game.outdoor_sun.light_energy=lerpf(1.0,.12,night)
-	# Street lamps stay off by day and warm the district at night.
+	# Street lamps stay off by day and warm the district at night. A lamp
+	# that emits nothing is hidden from the forward light list as well.
 	var lamp_energy:float=lerpf(0.0,2.6,night)
 	for l in game.town.lamp_lights:
 		l.light_energy=lamp_energy
 		l.omni_range=10.0
+		l.visible=lamp_energy>0.01

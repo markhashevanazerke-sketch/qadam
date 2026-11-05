@@ -25,6 +25,7 @@ var overview:=false
 var photo_mode:=false
 var photo_hint:Label
 var hud:Label
+var hud_cache:=""
 var pause:Label
 var minimap:Control
 var tut_panel:PanelContainer
@@ -392,17 +393,18 @@ func _physics_process(delta:float) -> void:
 	else:tut_fade=maxf(0.0,tut_fade-delta*2.5)
 	tut_panel.modulate.a=tut_fade
 	tut_panel.visible=tut_fade>0.01
-	if is_instance_valid(town.traffic):
-		hud.text="Кешкі аудан · 18:40"
+	# The HUD line is rebuilt only when one of its parts actually changes.
+	var hud_text:="Кешкі аудан · 18:40"
 	if shop_visits.inside():
-		if shop_visits.current_shop==4:hud.text="«ANA BEAUTY» САЛОНДАРЫ"
-		else:hud.text="%s  /  АЗЫҚ-ТҮЛІК"%shop_visits.rooms[shop_visits.current_shop].title
+		if shop_visits.current_shop==4:hud_text="«ANA BEAUTY» САЛОНДАРЫ"
+		else:hud_text="%s  /  АЗЫҚ-ТҮЛІК"%shop_visits.rooms[shop_visits.current_shop].title
 	if home_visits.inside():
-		hud.text="%s"%home_visits.rooms[home_visits.current_home].title
-	if home_visits.inside() and home_visits.current_door==story.home_index():hud.text="МЕНІҢ ПӘТЕРІМ\n"+hud.text
-	if is_instance_valid(story):hud.text=hud.text.replace("Кешкі аудан · 18:40","Кешкі аудан · "+story.clock_text())
-	if is_instance_valid(daily_life) and is_instance_valid(story) and story.stamina<99.5 and captured and not menu_active() and not overview and not (is_instance_valid(story_ui) and story_ui.is_modal()) and not daily_life.busy:
-		hud.text+="\nКүш-қуат: %d%%"%roundi(story.stamina)
+		hud_text="%s"%home_visits.rooms[home_visits.current_home].title
+	if home_visits.inside() and home_visits.current_door==story.home_index():hud_text="МЕНІҢ ПӘТЕРІМ\n"+hud_text
+	if is_instance_valid(story):hud_text=hud_text.replace("Кешкі аудан · 18:40","Кешкі аудан · "+story.clock_text())
+	var stamina_line:bool=is_instance_valid(daily_life) and is_instance_valid(story) and story.stamina<99.5 and captured and not menu_active() and not overview and not (is_instance_valid(story_ui) and story_ui.is_modal()) and not daily_life.busy
+	if stamina_line:hud_text+="\nКүш-қуат: %d%%"%roundi(story.stamina)
+	if hud_text!=hud_cache:hud_cache=hud_text;hud.text=hud_text
 	if menu_active() or not captured or overview or shop_visits.busy or home_visits.busy or (is_instance_valid(story_ui) and story_ui.is_modal()):return
 	if daily_life.busy or daily_life.seated:player.velocity=Vector3.ZERO;return
 	var input:=Input.get_vector("left","right","forward","back")

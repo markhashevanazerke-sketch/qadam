@@ -321,11 +321,20 @@ func sample(points:Array[Vector3],distance:float) -> Dictionary:
 		distance-=length
 	return {"at":points[0],"dir":Vector3.FORWARD}
 
+# The crowd and the traffic are simulated at 30 Hz instead of the 60 Hz
+# physics rate: walkers move ~1 m/s and cars ~5 m/s, so a 1/30 s step is a
+# few centimetres — invisible in play, but every tick (collision moves,
+# look-ahead loops, signal phases) runs half as often.
+const SIM_STEP:=1.0/30.0
+var sim_accum:=0.0
 func _physics_process(delta:float) -> void:
 	if paused:return
 	time+=delta
-	traffic.tick(delta)
-	population.tick(delta)
+	sim_accum+=minf(delta,SIM_STEP*4)
+	while sim_accum>=SIM_STEP:
+		sim_accum-=SIM_STEP
+		traffic.tick(SIM_STEP)
+		population.tick(SIM_STEP)
 
 func park_car(at:Vector3,angle:float) -> void:
 	# Authored road mesh makes a marked pocket outside the moving lanes.

@@ -12,12 +12,17 @@ var target_local:Vector2=Vector2.ZERO
 var has_target:=false
 var route:=PackedVector2Array()
 var sub:SubViewport
+var static_sub:SubViewport
 var map_view:MapView
 var pl:Vector3=Vector3.ZERO
 # Pixels per metre: the whole district (140 m deep) fits into the round frame.
 var px_per_m:float=(RING*2.0-20.0)/140.0
 
-class MapView extends Control:
+# The static layer (roads, buildings, shop labels) never changes during a
+# session, so it is drawn exactly once into a cached viewport; the live map
+# copies that texture and only redraws the moving parts (player arrow,
+# delivery route, pulse) every frame.
+class StaticLayer extends Control:
 	var mm
 	func to_screen(m:Vector2) -> Vector2:
 		return Vector2(mm.SIZE/2,mm.SIZE/2)+Vector2(m.x,m.y)*mm.px_per_m
@@ -64,6 +69,15 @@ class MapView extends Control:
 			draw_circle(hp,5,Color("0b1720"))
 			draw_circle(hp,3.5,Color("bd9ef5"))
 			label(hp+Vector2(0,-11),"ҮЙІМ",Color("e0d4fa"))
+
+class MapView extends Control:
+	var mm
+	func to_screen(m:Vector2) -> Vector2:
+		return Vector2(mm.SIZE/2,mm.SIZE/2)+Vector2(m.x,m.y)*mm.px_per_m
+	func _draw() -> void:
+		# Cached static layer (roads, buildings, labels) — one draw call
+		if mm.static_sub!=null:
+			draw_texture_rect(mm.static_sub.get_texture(),Rect2(Vector2.ZERO,Vector2(mm.SIZE,mm.SIZE)),false)
 		# Delivery target (pulsing)
 		if mm.has_target:
 			var tp:=to_screen(mm.target_local)
@@ -86,6 +100,16 @@ class MapView extends Control:
 func _ready() -> void:
 	custom_minimum_size=Vector2(SIZE,SIZE)
 	mouse_filter=Control.MOUSE_FILTER_IGNORE
+	# One-time bake of the static layer: rendered once, then cached.
+	static_sub=SubViewport.new()
+	static_sub.size=Vector2i(int(SIZE),int(SIZE))
+	static_sub.transparent_bg=true
+	static_sub.render_target_update_mode=SubViewport.UPDATE_ONCE
+	add_child(static_sub)
+	var static_layer:=StaticLayer.new()
+	static_layer.mm=self
+	static_layer.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	static_sub.add_child(static_layer)
 	sub=SubViewport.new()
 	sub.size=Vector2i(int(SIZE),int(SIZE))
 	sub.transparent_bg=true

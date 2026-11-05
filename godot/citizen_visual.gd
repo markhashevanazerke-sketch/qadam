@@ -11,7 +11,7 @@ var model_id="man"
 # Optional exact cloth colour (the protagonist wears a jacket no citizen wears).
 var outfit_override:Color=Color(0,0,0,0)
 var render_meshes:Array[GeometryInstance3D]=[]
-var detail_clock:=0.0
+var detail_clock:=0.25*randf() # random phase: keeps the 4 Hz detail passes desynchronized
 var animation_elapsed:=0.0
 var camera_distance:=0.0
 var last_camera_position:=Vector3(999,999,999)

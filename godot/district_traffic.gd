@@ -21,6 +21,9 @@ var cycles:=0
 var pedestrian_hold:=false
 var ped_hold_time:=0.0
 var minimum_gap:=1000.0
+# Live per-junction occupancy: which cars currently hold a gate reservation.
+# _junction_clear consults this list instead of scanning all 26 vehicles.
+var junction_busy:={}
 
 func _ready() -> void:
 	town=get_parent()
@@ -135,10 +138,9 @@ func _green_for(car:Dictionary,gate:Dictionary) -> bool:
 	return allows(gate.axis) or (car.route==2 and gate.junction==0 and phase==3)
 
 func _junction_clear(gate:Dictionary,car:Dictionary) -> bool:
-	for other in vehicles:
-		if other.id==car.id or other.active_gate.is_empty():continue
+	for other in junction_busy.get(gate.junction,[]):
+		if other.id==car.id:continue
 		var active:Dictionary=other.active_gate
-		if active.junction!=gate.junction:continue
 		if active.turn or gate.turn or active.axis!=gate.axis:return false
 	return true
 
@@ -202,6 +204,16 @@ func tick(delta:float) -> void:
 	for car in vehicles:
 		var at:Dictionary=town.sample(car.points,car.s)
 		car.dir=at.dir
+	# One bounding box around all walkers: a car whose lateral corridor does
+	# not touch it can skip the 32 per-walker tests with the same result.
+	var ped_min:=Vector3(INF,0,INF)
+	var ped_max:=Vector3(-INF,0,-INF)
+	for w in town.walkers:
+		var p:Vector3=w.node.position
+		if p.x<ped_min.x:ped_min.x=p.x
+		if p.x>ped_max.x:ped_max.x=p.x
+		if p.z<ped_min.z:ped_min.z=p.z
+		if p.z>ped_max.z:ped_max.z=p.z
 	for car in vehicles:
 		var at:Dictionary=town.sample(car.points,car.s)
 		var direction:Vector3=at.dir
@@ -215,6 +227,12 @@ func tick(delta:float) -> void:
 				clearance=minf(clearance,ahead-car.half-other.half-1.1)
 		var waiting_at_gate:=false
 		if car.active_gate.is_empty():
+			junction_busy.clear()
+			for v in vehicles:
+				if not v.active_gate.is_empty():
+					var k:int=v.active_gate.junction
+					if not junction_busy.has(k):junction_busy[k]=[]
+					junction_busy[k].append(v)
 			for gate in routes[car.route]:
 				var distance:float=fposmod(gate.s-car.s,car.length)-car.half
 				if distance>42 or distance< -.1:continue
@@ -230,7 +248,11 @@ func tick(delta:float) -> void:
 			var ahead:float=(Vector3(0,0,0)-at.at).dot(direction)
 			if absf(at.at.z)<4 and ahead>2.5+car.half-.05:clearance=minf(clearance,ahead-2.5-car.half)
 		if is_instance_valid(town.player):clearance=_person_gap(at.at,direction,town.to_local(town.player.global_position),car.half,clearance)
-		for w in town.walkers:clearance=_person_gap(at.at,direction,w.node.position,car.half,clearance)
+		var lat:Vector3=direction.cross(Vector3.UP)
+		var box_center:Vector3=(ped_min+ped_max)*0.5
+		var box_extent:float=((ped_max.x-ped_min.x)*absf(lat.x)+(ped_max.z-ped_min.z)*absf(lat.z))*0.5
+		if absf((box_center-at.at).dot(lat))-box_extent<=1.9:
+			for w in town.walkers:clearance=_person_gap(at.at,direction,w.node.position,car.half,clearance)
 		var target:float=minf(car.cruise,sqrt(maxf(0,2*2.5*clearance)))
 		car.speed=move_toward(car.speed,target,(1.65 if target>car.speed else 4.5)*delta)
 		car.step=minf(car.speed*delta,maxf(clearance,0))
