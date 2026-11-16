@@ -28,3 +28,7 @@ PROJECT_REQUIREMENTS.txt
 .DS_Store
 .env
 .env.*
+
+# Exported game binary — rebuildable, too big for git (93 MB)
+godot/Qadam.exe
+godot/Qadam.pck
