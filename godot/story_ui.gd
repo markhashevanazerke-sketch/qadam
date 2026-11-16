@@ -395,6 +395,11 @@ func _message(who:String,words:String,own:bool=false) -> void:
 	messages.push_color(UI.INK);messages.add_text(words+"\n\n");messages.pop()
 func _draw_messages() -> void:
 	messages.clear();_message(str(profiles[active_id].name),str(profiles[active_id].greeting))
+	# The saved conversation is part of the window: reopening a chat shows the
+	# whole exchange, and every sent reply is drawn right away.
+	for message in game.story.histories.get(active_id,[]):
+		_message("Натан" if message.role=="user" else str(profiles[active_id].name),str(message.content),message.role=="user")
+	if waiting and not pending_text.is_empty():_message("Натан · жіберілуде",pending_text,true)
 func _pick_polish(color:Color) -> void:
 	if modal!="chat" or not active_id.begins_with("salon_mani"):return
 	var room:Node3D=game.shop_visits.rooms[4]
@@ -563,7 +568,9 @@ func _commit_exchange(id:String,words:String,reply:String) -> void:
 	game.wordbook.last_drill=""
 	if not finished.is_empty() and is_instance_valid(messages):
 		var spec:Dictionary=game.wordbook.drill_spec(finished)
-		messages.add_text("\nЖаттығу орындалды: %s · +%d ₸ · +%d ұпай\n"%[str(spec.text),int(spec.money),int(spec.xp)])
+		# Deferred: _draw_messages (called by the caller right after this)
+		# would otherwise clear the note before it is ever shown.
+		messages.call_deferred("add_text","\nЖаттығу орындалды: %s · +%d ₸ · +%d ұпай\n"%[str(spec.text),int(spec.money),int(spec.xp)])
 func _after_reply(id:String,reply:String,status_text:String) -> void:
 	phrase_button.text="Жұмыс туралы" if id.begins_with("cashier_") else ("Тапсырысты әкелдім" if id.begins_with("resident_") else "Сәлемдесу")
 	draft.clear();status.text=status_text;phrase_help.text="Тірек сөздер: сәлеметсіз бе · менің атым · рақмет"
