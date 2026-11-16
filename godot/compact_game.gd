@@ -1,4 +1,4 @@
-﻿extends Node3D
+extends Node3D
 const Layout=preload("res://district_layout.gd")
 const SPAWN := Vector3(0,.2,38)
 var player:CharacterBody3D

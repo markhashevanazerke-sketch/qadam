@@ -35,6 +35,7 @@ var coffee_button:Button
 var mani_label:Label
 var mani_grid:GridContainer
 var status:Label
+var teacher_note:Label
 var portrait_holder:SubViewportContainer
 var portrait:SubViewport
 var request:HTTPRequest
@@ -316,6 +317,16 @@ func _build_chat() -> void:
 	messages=RichTextLabel.new();messages.bbcode_enabled=false;messages.selection_enabled=true;messages.scroll_following=true
 	messages.custom_minimum_size=Vector2(0,180);messages.size_flags_vertical=Control.SIZE_EXPAND_FILL;box.add_child(messages)
 	status=_label(box,"",15);status.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;status.add_theme_color_override("font_color",UI.TEAL)
+	# AI teacher: an in-chat assistant that reviews the player's messages and
+	# explains new words. Fed from the [[TEACHER]] block of every LLM reply.
+	var teacher_box:=PanelContainer.new()
+	var tstyle:=StyleBoxFlat.new();tstyle.bg_color=Color("e3efec");tstyle.set_corner_radius_all(12);tstyle.set_content_margin_all(12)
+	tstyle.border_color=UI.TEAL;tstyle.set_border_width_all(1)
+	teacher_box.add_theme_stylebox_override("panel",tstyle)
+	var tcol:=VBoxContainer.new();tcol.add_theme_constant_override("separation",3);teacher_box.add_child(tcol)
+	_label(tcol,"AI-МҰҒАЛІМ · ТІЛ КӨМЕКШІСІ",13).add_theme_color_override("font_color",UI.TEAL)
+	teacher_note=_label(tcol,"",14);teacher_note.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+	box.add_child(teacher_box)
 	phrase_help=_label(box,"",14);phrase_help.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;phrase_help.add_theme_color_override("font_color",UI.MUTED)
 	job_button=_button(box,"",_job_action);job_button.add_theme_font_size_override("font_size",16);UI.primary(job_button)
 	coffee_button=_button(box,"",_coffee_action);coffee_button.add_theme_font_size_override("font_size",15);coffee_button.visible=false
@@ -371,6 +382,7 @@ func open_chat(id:String) -> void:
 	_show_modal("chat");chat_name.text=profiles[id].name;chat_role.text=profiles[id].role
 	phrase_button.text="Жұмыс туралы" if id.begins_with("cashier_") else ("Тапсырысты әкелдім" if id.begins_with("resident_") else "Сәлемдесу")
 	draft.clear();status.text="";phrase_help.text="Тірек сөздер: сәлеметсіз бе · менің атым · рақмет"
+	if is_instance_valid(teacher_note):teacher_note.text="Мен — жасанды интеллект мұғалім. Сенің сөзіңді тыңдап, қатені жылы түрде түзетіп, жауаптағы жаңа сөздерді түсіндіремін."
 	if id.begins_with("cashier_"):phrase_help.text="Тірек сөздер: жұмыс іздеймін · курьер · тапсырыс · еңбекақы"
 	elif id.begins_with("resident_"):phrase_help.text="Тірек сөздер: тапсырысыңыз · алып келдім · алыңыз · сау болыңыз"
 	elif id.begins_with("salon_"):phrase_help.text="Тірек сөздер: тапсырыс · алып келдім · сақын · рақмет"
@@ -499,7 +511,10 @@ func send_message() -> void:
 	if not _llm_usable(key):
 		_offline_reply(words)
 		return
-	var packet:Array=[{"role":"system","content":str(profiles[active_id].system)+"\n"+game.story.context_text()}]
+	# The LLM reply carries the AI-teacher note in a separate [[TEACHER]]
+	# block, so one request gives both the NPC answer and the lesson.
+	var teacher_rule:="Жауабыңды екі бөлімнен құра. Алдымен кейіпкер ретінде жауап бер. Содан кейін жеке жаңа жолға дәл [[TEACHER]] деп жаз және оған қарай Мұғалімнің (жасанды интеллект көмекшісінің) ойыншыға арнаған 1–3 сөйлемін: (1) ойыншының сөзінде мағынаға әсер ететін қате болса — «Былай айтуға болады: …»; (2) жауабыңдағы 1–2 маңызды сөздің қысқаша мағынасы; (3) қысқа ынталандыру. Мұғалім бөлімі де тек қазақ тілінде болсын."
+	var packet:Array=[{"role":"system","content":str(profiles[active_id].system)+"\n"+game.story.context_text()+"\n"+teacher_rule}]
 	var history:Array=game.story.histories.get(active_id,[])
 	for message in history.slice(maxi(0,history.size()-12)):
 		if message is Dictionary and message.get("role","") in ["user","assistant"]:packet.append({"role":message.role,"content":str(message.get("content","")).left(2000)})
@@ -512,7 +527,8 @@ func send_message() -> void:
 	waiting=true;pending_text=words;request_started=Time.get_ticks_msec();job_button.disabled=true
 	_refresh_voice_controls();_draw_messages()
 	status.text=str(profiles[active_id].name)+" жауап жазып жатыр…"
-	var error:=request.request(API_URL,["Authorization: Bearer "+key,"Content-Type: application/json"],HTTPClient.METHOD_POST,JSON.stringify({"model":"gemma4","messages":packet,"max_tokens":400,"stream":false}))
+	if is_instance_valid(teacher_note):teacher_note.text="Мұғалім сені тыңдап жатыр…"
+	var error:=request.request(API_URL,["Authorization: Bearer "+key,"Content-Type: application/json"],HTTPClient.METHOD_POST,JSON.stringify({"model":"gemma4","messages":packet,"max_tokens":700,"stream":false}))
 	if error!=OK:_request_failed("Байланыс орнатылмады. Қайталау үшін «Жіберу» батырмасын бас.")
 func _reply(result:int,code:int,_headers:PackedStringArray,body:PackedByteArray,serial:int,id:String,words:String) -> void:
 	if serial!=request_serial or id!=active_id:return
@@ -527,8 +543,16 @@ func _reply(result:int,code:int,_headers:PackedStringArray,body:PackedByteArray,
 		if first is Dictionary and first.get("message") is Dictionary and first.message.get("content") is String:reply=first.message.content.strip_edges().left(2500)
 	if reply.is_empty():
 		_llm_failed(id,words,"Жауап бос келді.");return
-	_commit_exchange(id,words,reply);_finish_request()
-	_after_reply(id,reply,"")
+	# Split the NPC answer from the AI-teacher lesson block.
+	var npc_reply:=reply;var teacher_part:=""
+	var marker_pos:=reply.find("[[TEACHER]]")
+	if marker_pos>=0:
+		npc_reply=reply.left(marker_pos).strip_edges()
+		teacher_part=reply.substr(marker_pos+11).strip_edges()
+	if npc_reply.is_empty():npc_reply=reply.strip_edges()
+	_commit_exchange(id,words,npc_reply);_finish_request()
+	_after_reply(id,npc_reply,"")
+	if not teacher_part.is_empty() and is_instance_valid(teacher_note):teacher_note.text=teacher_part
 func _finish_request() -> void:
 	waiting=false;pending_text="";draft.editable=true;_refresh_voice_controls()
 	draft.grab_focus()
@@ -551,6 +575,15 @@ func _offline_reply(words:String) -> void:
 	var reply:=OFFLINE_DIALOG.reply(id,profiles[id],words,game.story)
 	_commit_exchange(id,words,reply)
 	_after_reply(id,reply,"Байланыс жоқ · жауап дайын сөздерден")
+	_offline_teacher_note()
+# Offline, the teacher still works: it drills the newest dictionary word.
+func _offline_teacher_note() -> void:
+	if not is_instance_valid(teacher_note):return
+	var words:Array=game.wordbook.sorted_words()
+	if not words.is_empty():
+		teacher_note.text="Байланыс жоқ — дайын сөздермен жалғасамыз. Сөздік сөзін қайтала: «%s»."%str(words[-1])
+	else:
+		teacher_note.text="Байланыс жоқ — дайын сөздермен жалғасамыз. Тірек сөздерді қолдан, қателесуден қорықпа."
 # The LLM is liveliness on top, not a requirement: on any network/API failure
 # the conversation continues from the local pre-written tree.
 func _llm_failed(id:String,words:String,note:String) -> void:
@@ -558,6 +591,7 @@ func _llm_failed(id:String,words:String,note:String) -> void:
 	var reply:=OFFLINE_DIALOG.reply(id,profiles[id],words,game.story)
 	_commit_exchange(id,words,reply);_finish_request()
 	_after_reply(id,reply,note+" · жалғасы дайын сөздерден")
+	_offline_teacher_note()
 func _commit_exchange(id:String,words:String,reply:String) -> void:
 	var history:Array=game.story.histories.get(id,[])
 	history.append({"role":"user","content":words});history.append({"role":"assistant","content":reply})
